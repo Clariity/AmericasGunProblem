@@ -6,17 +6,35 @@
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.middle-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.height-90 {
+  height: 90vh;
+}
+
+.background-blue {
+  background-color: lightblue;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.background-red {
+  background-color: lightcoral;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.background-yellow {
+  background-color: lightyellow;
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.background-green {
+  background-color: lightgreen;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
 }
