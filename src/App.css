@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  background-color: lightblue;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .App-logo {
@@ -18,23 +25,66 @@
   height: 90vh;
 }
 
-.background-blue {
-  background-color: lightblue;
-  color: white;
-  font-family: 'Roboto Condensed', sans-serif;
+/* ----------------------- World Map ---------------------- */
+.rsm-svg {
+  max-height: 90vh;
+  width: 100%;
 }
-.background-red {
-  background-color: lightcoral;
-  color: white;
-  font-family: 'Roboto Condensed', sans-serif;
+.worldmap-legend {
+  display: flex;
+  flex-direction: row;
 }
-.background-yellow {
-  background-color: lightyellow;
-  color: black;
-  font-family: 'Roboto Condensed', sans-serif;
+.worldmap-legend-gradient {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.background-green {
-  background-color: lightgreen;
+.worldmap-legend-number {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+/* ----------------------- Arrow ---------------------- */
+.arrow {
+  text-align: center;
   color: white;
-  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 20px;
+}
+.arrow-icon:hover {
+  cursor: pointer;
+}
+.arrow-icon {
+  height: 100px !important;
+  width: 100px !important;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ----------------------- Navbar ---------------------- */
+.floating-nav {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  width: 50px;
+  height: 500px;
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 30px;
+  margin-top: -250px;
+  border-radius: 30px;
 }
