@@ -43,9 +43,10 @@ export default () => {
   return (
     <div className="App">
       <div className="floating-nav">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div className="floating-nav-button">1</div>
+        <div className="floating-nav-button">2</div>
+        <div className="floating-nav-button">3</div>
+        <div className="floating-nav-button">4</div>
       </div>
       <div className='height-90 middle-text'>
         <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut' delay={200} duration={2}>

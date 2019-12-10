@@ -76,7 +76,7 @@ html {
 
 /* ----------------------- Navbar ---------------------- */
 .floating-nav {
-  background-color: black;
+  /* background-color: rgb(97, 187, 218); */
   color: white;
   padding: 5px;
   width: 50px;
@@ -87,4 +87,24 @@ html {
   left: 30px;
   margin-top: -250px;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-nav-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid white 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+}
+.floating-nav-button:hover {
+  cursor: pointer;
+  border: solid green 2px;
+  color: green;
 }
