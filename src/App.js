@@ -13,8 +13,10 @@ import "tui-chart/dist/tui-chart.css";
 export default () => {
   const [content, setContent] = useState("");
   const [rendered, setRendered] = useState(false);
+  const titleRef = useRef()
   const treeMapRef = useRef()
   const worldMapRef = useRef()
+  const scatterRef = useRef()
 
   useEffect(() => {
     if (!rendered) {
@@ -43,12 +45,12 @@ export default () => {
   return (
     <div className="App">
       <div className="floating-nav">
-        <div className="floating-nav-button">1</div>
-        <div className="floating-nav-button">2</div>
-        <div className="floating-nav-button">3</div>
-        <div className="floating-nav-button">4</div>
+        <div className="floating-nav-button" onClick={() => scrollTo(titleRef)}>1</div>
+        <div className="floating-nav-button" onClick={() => scrollTo(treeMapRef)}>2</div>
+        <div className="floating-nav-button" onClick={() => scrollTo(worldMapRef)}>3</div>
+        <div className="floating-nav-button" onClick={() => scrollTo(scatterRef)}>4</div>
       </div>
-      <div className='height-90 middle-text'>
+      <div className='height-90 middle-text' ref={titleRef}>
         <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut' delay={200} duration={2}>
           <h1>How Bad Is America's Gun Problem?</h1>
         </ScrollAnimation>
@@ -84,10 +86,10 @@ export default () => {
           <div className='worldmap-legend-number'>120.5</div>
         </div>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(worldMapRef)}>
+      <div className="arrow bounce" onClick={() => scrollTo(scatterRef)}>
         <ArrowDownwardIcon className="arrow-icon"/>
       </div>
-      <div className='height-90 middle-text'>
+      <div className='height-90 middle-text' ref={scatterRef}>
         <ScrollAnimation animateIn='fadeInRight' animateOut='zoomOutDown'>
           This is some example text
         </ScrollAnimation>
