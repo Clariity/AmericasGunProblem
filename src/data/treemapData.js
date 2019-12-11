@@ -346,7 +346,7 @@ module.exports = {
               "value": 633000
             },
             {
-              "label": "Surilabel",
+              "label": "Suriname",
               "value": 88000
             },
             {

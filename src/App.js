@@ -6,13 +6,15 @@ import MapChart from "./MapChart";
 import ReactTooltip from "react-tooltip";
 import treemapData from './data/treemapData'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-
+import ApexChart from "react-apexcharts";
+import { options, series } from './data/scatter1Data'
 import chart from "tui-chart";
 import "tui-chart/dist/tui-chart.css";
 
 export default () => {
   const [content, setContent] = useState("");
   const [rendered, setRendered] = useState(false);
+  const [section, setSection] = useState(1);
   const titleRef = useRef()
   const treeMapRef = useRef()
   const worldMapRef = useRef()
@@ -42,20 +44,25 @@ export default () => {
 
   const scrollTo = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
+  const changeSection = (ref, number) => {
+    setSection(number)
+    scrollTo(ref)
+  }
+
   return (
     <div className="App">
       <div className="floating-nav">
-        <div className="floating-nav-button" onClick={() => scrollTo(titleRef)}>1</div>
-        <div className="floating-nav-button" onClick={() => scrollTo(treeMapRef)}>2</div>
-        <div className="floating-nav-button" onClick={() => scrollTo(worldMapRef)}>3</div>
-        <div className="floating-nav-button" onClick={() => scrollTo(scatterRef)}>4</div>
+        <div className={section === 1 ? "floating-nav-button-a" : "floating-nav-button"} onClick={() => changeSection(titleRef, 1)}>1</div>
+        <div className={section === 2 ? "floating-nav-button-a" : "floating-nav-button"} onClick={() => changeSection(treeMapRef, 2)}>2</div>
+        <div className={section === 3 ? "floating-nav-button-a" : "floating-nav-button"} onClick={() => changeSection(worldMapRef, 3)}>3</div>
+        <div className={section === 4 ? "floating-nav-button-a" : "floating-nav-button"} onClick={() => changeSection(scatterRef, 4)}>4</div>
       </div>
       <div className='height-90 middle-text' ref={titleRef}>
         <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut' delay={200} duration={2}>
           <h1>How Bad Is America's Gun Problem?</h1>
         </ScrollAnimation>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(treeMapRef)}>
+      <div className="arrow bounce" onClick={() => changeSection(treeMapRef, 2)}>
         <ArrowDownwardIcon className="arrow-icon"/>
       </div>
       <div className='height-90 middle-text' ref={treeMapRef}>
@@ -64,7 +71,7 @@ export default () => {
           <div id="chart-area" />
         </ScrollAnimation>
       </div>
-      <div className='arrow bounce' onClick={() => scrollTo(worldMapRef)}>
+      <div className='arrow bounce' onClick={() => changeSection(worldMapRef, 3)}>
         <ArrowDownwardIcon className='arrow-icon'/>
       </div>
       <div className='height-90 middle-text' ref={worldMapRef}>
@@ -86,12 +93,18 @@ export default () => {
           <div className='worldmap-legend-number'>120.5</div>
         </div>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(scatterRef)}>
+      <div className="arrow bounce" onClick={() => changeSection(scatterRef, 4)}>
         <ArrowDownwardIcon className="arrow-icon"/>
       </div>
       <div className='height-90 middle-text' ref={scatterRef}>
         <ScrollAnimation animateIn='fadeInRight' animateOut='zoomOutDown'>
-          This is some example text
+          <ApexChart 
+            options={options} 
+            series={series} 
+            type="scatter" 
+            width="1400"
+            height="800" 
+          />
         </ScrollAnimation>
       </div>
     </div>
