@@ -1,107 +1,173 @@
 import React, { useState, useRef, useEffect } from 'react';
+
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import HomeIcon from '@material-ui/icons/Home';
+import ExploreIcon from '@material-ui/icons/Explore';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import TrendingUpIcon from '@material-ui/icons/TrendingUp';
+import TrendingFlatIcon from '@material-ui/icons/TrendingFlat';
+import ScatterPlotIcon from '@material-ui/icons/ScatterPlot';
+import BarChartIcon from '@material-ui/icons/BarChart';
+import TimelineIcon from '@material-ui/icons/Timeline';
+import InsertChartIcon from '@material-ui/icons/InsertChart';
+
+import ApexChart from "react-apexcharts";
+import chart from "tui-chart";
 import ScrollAnimation from 'react-animate-on-scroll';
+import MapChart from "./components/MapChart";
+import ReactTooltip from "react-tooltip";
+
+import { treeMapData, treeMapOptions, treeMapTheme } from './data/treemapData'
+import { options, series } from './data/scatter1Data'
+import { options2, series2 } from './data/scatter2Data'
+import { options3, series3 } from './data/scatter3Data'
+import { options4, series4 } from './data/bar1Data'
+import { options5, series5 } from './data/lineData'
+import { options6, series6 } from './data/bar2Data'
+
+import "tui-chart/dist/tui-chart.css";
 import "animate.css/animate.min.css";
 import './App.css';
-import MapChart from "./MapChart";
-import ReactTooltip from "react-tooltip";
-import treemapData from './data/treemapData'
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import ApexChart from "react-apexcharts";
-import { options, series } from './data/scatter1Data'
-import chart from "tui-chart";
-import "tui-chart/dist/tui-chart.css";
+import MapLegend from './components/MapLegend';
 
 export default () => {
   const [content, setContent] = useState("");
   const [rendered, setRendered] = useState(false);
-  const [section, setSection] = useState(1);
   const titleRef = useRef()
   const treeMapRef = useRef()
   const worldMapRef = useRef()
   const scatterRef = useRef()
+  const scatterRef2 = useRef()
+  const scatterRef3 = useRef()
+  const barRef = useRef()
+  const lineRef = useRef()
+  const barRef2 = useRef()
 
   useEffect(() => {
     if (!rendered) {
-      var options = {
-        chart: { width: 1400, height: 800 },
-        series: { showLabel: true, zoomable: true, useLeafLabel: false },
-        tooltip: { suffix: "guns", offsetY: -40},
-        chartExportMenu: { visible: false }
-      };
-      var theme = {
-        series: {
-          colors: [ "#83b14e", "#458a3f", "#295ba0", "#2a4175", "#289399", "#289399", "#617178", "#8a9a9a", "#516f7d", "#dddddd" ],
-          borderColor: "#cccccc",
-          borderWidth: 5
-        }
-      };
       var container = document.getElementById("chart-area");
-      chart.registerTheme("newTheme", theme);
-      chart.treemapChart(container, treemapData, options);
+      chart.registerTheme("newTheme", treeMapTheme);
+      chart.treemapChart(container, treeMapData, treeMapOptions);
       setRendered(true)
     }
   }, [rendered])
 
   const scrollTo = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
-  const changeSection = (ref, number) => {
-    setSection(number)
-    scrollTo(ref)
-  }
-
   return (
     <div className="App">
       <div className="floating-nav">
-        <div className={section === 1 ? "floating-nav-button-a" : "floating-nav-button"} onClick={() => changeSection(titleRef, 1)}>1</div>
-        <div className={section === 2 ? "floating-nav-button-a" : "floating-nav-button"} onClick={() => changeSection(treeMapRef, 2)}>2</div>
-        <div className={section === 3 ? "floating-nav-button-a" : "floating-nav-button"} onClick={() => changeSection(worldMapRef, 3)}>3</div>
-        <div className={section === 4 ? "floating-nav-button-a" : "floating-nav-button"} onClick={() => changeSection(scatterRef, 4)}>4</div>
+        <div className="floating-nav-button" onClick={() => scrollTo(titleRef)}><HomeIcon/></div>
+        <div className="floating-nav-button" onClick={() => scrollTo(treeMapRef)}><DashboardIcon/></div>
+        <div className="floating-nav-button" onClick={() => scrollTo(worldMapRef)}><ExploreIcon/></div>
+        <div className="floating-nav-button" onClick={() => scrollTo(scatterRef)}><TrendingUpIcon/></div>
+        <div className="floating-nav-button" onClick={() => scrollTo(scatterRef2)}><TrendingFlatIcon/></div>
+        <div className="floating-nav-button" onClick={() => scrollTo(scatterRef3)}><ScatterPlotIcon/></div>
+        <div className="floating-nav-button" onClick={() => scrollTo(barRef)}><BarChartIcon/></div>
+        <div className="floating-nav-button" onClick={() => scrollTo(lineRef)}><TimelineIcon/></div>
+        <div className="floating-nav-button" onClick={() => scrollTo(barRef2)}><InsertChartIcon/></div>
       </div>
       <div className='height-90 middle-text' ref={titleRef}>
-        <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut' delay={200} duration={2}>
+        <ScrollAnimation animateIn='fadeIn' delay={200} duration={2}>
           <h1>How Bad Is America's Gun Problem?</h1>
         </ScrollAnimation>
       </div>
-      <div className="arrow bounce" onClick={() => changeSection(treeMapRef, 2)}>
+      <div className="arrow bounce" onClick={() => scrollTo(treeMapRef)}>
         <ArrowDownwardIcon className="arrow-icon"/>
       </div>
       <div className='height-90 middle-text' ref={treeMapRef}>
-        <ScrollAnimation animateIn='bounceIn' animateOut='zoomOutRight'>
+        <ScrollAnimation animateIn='bounceIn' className="scatter-background">
           Where Are The World's Guns?
           <div id="chart-area" />
         </ScrollAnimation>
       </div>
-      <div className='arrow bounce' onClick={() => changeSection(worldMapRef, 3)}>
+      <div className='arrow bounce' onClick={() => scrollTo(worldMapRef)}>
         <ArrowDownwardIcon className='arrow-icon'/>
       </div>
       <div className='height-90 middle-text' ref={worldMapRef}>
         <MapChart setTooltipContent={setContent} />
         <ReactTooltip>{content}</ReactTooltip>
-        <div className='worldmap-legend'>
-          <div className='worldmap-legend-number'>0</div>
-          <div className='worldmap-legend-gradient'>
-            <svg width="1000px" height="20px">
-              <defs>
-                <linearGradient id="Gradient-1" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#ffedea" />
-                  <stop offset="100%" stopColor="#8b0f00" />
-                </linearGradient>
-              </defs>
-              <rect width="1000" height="20" fill="url(#Gradient-1)"/>
-            </svg>
-          </div>
-          <div className='worldmap-legend-number'>120.5</div>
-        </div>
+        <MapLegend/>
       </div>
-      <div className="arrow bounce" onClick={() => changeSection(scatterRef, 4)}>
+      <div className="arrow bounce" onClick={() => scrollTo(scatterRef)}>
         <ArrowDownwardIcon className="arrow-icon"/>
       </div>
       <div className='height-90 middle-text' ref={scatterRef}>
-        <ScrollAnimation animateIn='fadeInRight' animateOut='zoomOutDown'>
+        <ScrollAnimation animateIn='fadeInRight' className="scatter-background">
           <ApexChart 
             options={options} 
             series={series} 
+            type="line" 
+            width="1400"
+            height="800" 
+          />
+        </ScrollAnimation>
+      </div>
+      <div className="arrow bounce" onClick={() => scrollTo(scatterRef2)}>
+        <ArrowDownwardIcon className="arrow-icon"/>
+      </div>
+      <div className='height-90 middle-text' ref={scatterRef2}>
+        <ScrollAnimation animateIn='fadeInLeft' className="scatter-background">
+          <ApexChart 
+            options={options2} 
+            series={series2} 
+            type="line" 
+            width="1400"
+            height="800" 
+          />
+        </ScrollAnimation>
+      </div>
+      <div className="arrow bounce" onClick={() => scrollTo(scatterRef3)}>
+        <ArrowDownwardIcon className="arrow-icon"/>
+      </div>
+      <div className='height-90 middle-text' ref={scatterRef3}>
+        <ScrollAnimation animateIn='zoomIn' className="scatter-background">
+          <ApexChart 
+            options={options3} 
+            series={series3} 
             type="scatter" 
+            width="1400"
+            height="800" 
+          />
+        </ScrollAnimation>
+      </div>
+      <div className="arrow bounce" onClick={() => scrollTo(barRef)}>
+        <ArrowDownwardIcon className="arrow-icon"/>
+      </div>
+      <div className='height-90 middle-text' ref={barRef}>
+        <ScrollAnimation animateIn='zoomIn' className="scatter-background">
+          <ApexChart 
+            options={options4} 
+            series={series4} 
+            type="bar" 
+            width="1400"
+            height="800" 
+          />
+        </ScrollAnimation>
+      </div>
+      <div className="arrow bounce" onClick={() => scrollTo(lineRef)}>
+        <ArrowDownwardIcon className="arrow-icon"/>
+      </div>
+      <div className='height-90 middle-text' ref={lineRef}>
+        <ScrollAnimation animateIn='slideInLeft' className="scatter-background">
+          <ApexChart 
+            options={options5} 
+            series={series5} 
+            type="line" 
+            width="1400"
+            height="800" 
+          />
+        </ScrollAnimation>
+      </div>
+      <div className="arrow bounce" onClick={() => scrollTo(barRef2)}>
+        <ArrowDownwardIcon className="arrow-icon"/>
+      </div>
+      <div className='height-90 middle-text' ref={barRef2}>
+        <ScrollAnimation animateIn='slideInRight' className="scatter-background">
+          <ApexChart 
+            options={options6} 
+            series={series6} 
+            type="bar" 
             width="1400"
             height="800" 
           />

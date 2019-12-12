@@ -1,6 +1,6 @@
 import '../App.css';
 
-export const options = {
+export const options2 = {
   chart: {
     zoom: {
       enabled: true,
@@ -12,7 +12,7 @@ export const options = {
     title: {
       text: "Rate of Civilian Gun Ownership / 100 persons (2017)",
     },
-    tickAmount: 10,
+    tickAmount: 5,
     labels: {
       formatter: function(val) {
         return parseFloat(val).toFixed(1)
@@ -23,7 +23,7 @@ export const options = {
     title: {
       text: "Rate of Gun Deaths / 100,000 persons (2016)",
     },
-    tickAmount: 7
+    tickAmount: 4
   },
   fill: {
     type: 'solid',
@@ -116,46 +116,26 @@ const dataLabels = [{
   data: [
     ["Antigua and Barbuda",5.4,5.4],
     ["Argentina",7.4,7],
-    ["Bahamas",18.8,13.6],
     ["Barbados",3.5,4.5],
-    ["Belize",10,14.2],
-    ["Bolivia",2,5],
     ["Brazil",8.3,19.4],
     ["Canada",34.7,2.1],
     ["Chile",12.1,2.6],
-    ["Colombia",10.1,25.9],
-    ["Costa Rica",10,5.9],
     ["Cuba",2.1,1.5],
     ["Dominica",6.2,4.1],
-    ["Dominican Republic",7.4,10.6],
-    ["Ecuador",2.4,9.2],
-    ["El Salvador",12,39.2],
     ["French Guiana",19.6,2.7],
-    ["Greenland",22.3,25.9],
     ["Grenada",4.6,2.6],
-    ["Guatemala",12.1,32.3],
     ["Guyana",15.8,10.7],
-    ["Haiti",2.6,6.6],
-    ["Honduras",14.1,22.5],
-    ["Jamaica",8.8,18.1],
-    ["Mexico",12.9,11.8],
-    ["Nicaragua",5.2,6.1],
-    ["Panama",10.8,11],
     ["Paraguay",16.7,10.7],
-    ["Peru",2,2.9],
     ["Puerto Rico",11.5,17.1],
     ["Saint Lucia",3.4,9.2],
     ["Saint Vincent and the Grenadines",3.4,10.3],
     ["Suriname",15.9,5],
     ["Trinidad and Tobago",3.2,12.7],
-    ["United States of America",120.5,10.6],
-    ["Uruguay",34.7,9.5],
-    ["Venezuela",18.5,38.7]
+    ["Uruguay",34.7,9.5]
   ]
 }, {
   name: "Asia",
   data: [
-    ["Afghanistan",12.5,14.2],
     ["Armenia",6.1,2],
     ["Azerbaijan",3.6,2.8],
     ["Bahrain",12.8,0.9],
@@ -166,7 +146,6 @@ const dataLabels = [{
     ["China",3.6,0.2],
     ["Cyprus",29.1,1.7],
     ["Georgia",10.1,2.9],
-    ["India",5.3,2.1],
     ["Indonesia",0,0.4],
     ["Iran, Islamic Republic of",7.3,1.1],
     ["Iraq",19.6,9.8],
@@ -178,7 +157,6 @@ const dataLabels = [{
     ["Korea, South",0.2,0.4],
     ["Kuwait",16.7,0.5],
     ["Kyrgyzstan",2.8,1.4],
-    ["Lao, People's Democratic Republic",3,1.2],
     ["Lebanon",31.9,1.4],
     ["Malaysia",0.7,1.1],
     ["Maldives",6.2,0.4],
@@ -186,7 +164,6 @@ const dataLabels = [{
     ["Myanmar",1.6,1.1],
     ["Nepal",1.5,1.3],
     ["Oman",16.7,0.2],
-    ["Pakistan",22.3,1.5],
     ["Palestinian Territories",1.1,2.8],
     ["Philippines",3.6,8.3],
     ["Qatar",16.7,0.4],
@@ -266,7 +243,7 @@ const dataLabels = [{
   ]
 }]
 
-export const series = [{
+export const series2 = [{
   name: "Africa",
   type: 'scatter',
   data: [
@@ -330,10 +307,10 @@ export const series = [{
   type: 'line',
   data: [{
     x: 0,
-    y: 3.78
+    y: 2.89
   }, {
-    x: 120.5,
-    y: 10.90
+    x: 52.8,
+    y: 2.93
   }]
 }, {
   name: "Americas",
@@ -341,47 +318,27 @@ export const series = [{
   data: [
     {x:5.4,y:5.4},
     {x:7.4,y:7},
-    {x:18.8,y:13.6},
     {x:3.5,y:4.5},
-    {x:10,y:14.2},
-    {x:2,y:5},
     {x:8.3,y:19.4},
     {x:34.7,y:2.1},
     {x:12.1,y:2.6},
-    {x:10.1,y:25.9},
-    {x:10,y:5.9},
     {x:2.1,y:1.5},
     {x:6.2,y:4.1},
-    {x:7.4,y:10.6},
-    {x:2.4,y:9.2},
-    {x:12,y:39.2},
     {x:19.6,y:2.7},
-    {x:22.3,y:25.9},
     {x:4.6,y:2.6},
-    {x:12.1,y:32.3},
     {x:15.8,y:10.7},
-    {x:2.6,y:6.6},
-    {x:14.1,y:22.5},
-    {x:8.8,y:18.1},
-    {x:12.9,y:11.8},
-    {x:5.2,y:6.1},
-    {x:10.8,y:11},
     {x:16.7,y:10.7},
-    {x:2,y:2.9},
     {x:11.5,y:17.1},
     {x:3.4,y:9.2},
     {x:3.4,y:10.3},
     {x:15.9,y:5},
     {x:3.2,y:12.7},
-    {x:120.5,y:10.6},
-    {x:34.7,y:9.5},
-    {x:18.5,y:38.7}
+    {x:34.7,y:9.5}
   ]
 }, {
   name: "Asia",
   type: 'scatter',
   data: [
-    {x:12.5,y:14.2},
     {x:6.1,y:2},
     {x:3.6,y:2.8},
     {x:12.8,y:0.9},
@@ -392,7 +349,6 @@ export const series = [{
     {x:3.6,y:0.2},
     {x:29.1,y:1.7},
     {x:10.1,y:2.9},
-    {x:5.3,y:2.1},
     {x:0,y:0.4},
     {x:7.3,y:1.1},
     {x:19.6,y:9.8},
@@ -404,7 +360,6 @@ export const series = [{
     {x:0.2,y:0.4},
     {x:16.7,y:0.5},
     {x:2.8,y:1.4},
-    {x:3,y:1.2},
     {x:31.9,y:1.4},
     {x:0.7,y:1.1},
     {x:6.2,y:0.4},
@@ -412,7 +367,6 @@ export const series = [{
     {x:1.6,y:1.1},
     {x:1.5,y:1.3},
     {x:16.7,y:0.2},
-    {x:22.3,y:1.5},
     {x:1.1,y:2.8},
     {x:3.6,y:8.3},
     {x:16.7,y:0.4},

@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { scaleLinear } from "d3-scale";
-import mapData from './data/mapData'
+import mapData from '../data/mapData'
 
 const geoUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 // const colorScale = scaleLinear().domain([0, 120.5]).range(["#ffedea", "#ff5233"]);

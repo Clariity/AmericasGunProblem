@@ -1,11 +1,19 @@
-// {
-//   "label": "Americas",
-//   "children": [
+export const treeMapTheme = {
+  series: {
+    colors: [ "#83b14e", "#458a3f", "#295ba0", "#2a4175", "#289399", "#289399", "#617178", "#8a9a9a", "#516f7d", "#dddddd" ],
+    borderColor: "#cccccc",
+    borderWidth: 5
+  }
+};
 
-//   ]
-// }
+export const treeMapOptions = {
+  chart: { width: 1400, height: 800 },
+  series: { showLabel: true, zoomable: true, useLeafLabel: false },
+  tooltip: { suffix: "guns", offsetY: -40},
+  chartExportMenu: { visible: false }
+};
 
-module.exports = { 
+export const treeMapData = { 
   "series": [
     {
       "label": "Asia",
