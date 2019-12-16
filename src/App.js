@@ -106,7 +106,9 @@ export default () => {
         <p>Every chart will have an information icon by it like the one below. Clicking on this will reveal all additional chart information and sources.</p>
         <InfoOutlinedIcon className='info-icon' data-tip='Click for information' onClick={() => setDialog(true, 0)}/>
         <Dialogs openDialogs={openDialogs} id='0' close={() => setDialog(false, 0)} content={
-          <span>Here is where you will see the additional chart information and sources for the data.</span>
+          <div className='dialog-text'>
+            This is where additional chart information and links to data sources will go.
+          </div>
         }/>
       </div>
       <div className="arrow bounce">
@@ -131,6 +133,7 @@ export default () => {
       <div className='height-90 middle-text side-margins' ref={textRef}>
         <h3><u>Gun Numbers</u></h3>
         <p>To start to answer this question, let us first look at some factors that will help us to answer questions along the way.</p>
+        <p>America is notorious for the sheer volume of firearms it owns. So how do these numbers stack up against the rest of the world. How many of the world's civilian owned gun are in America?</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(treeMapRef)}/>
@@ -143,11 +146,20 @@ export default () => {
         </ScrollAnimation>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 1)}/>
         <Dialogs openDialogs={openDialogs} id='1' close={() => setDialog(false, 1)} content={
-          <span>test1</span>
+          <div className='dialog-text'></div>
         }/>
       </div>
       <div className='arrow bounce'>
-        <ArrowDownwardIcon className='arrow-icon' onClick={() => scrollTo(worldMapRef)}/>
+        <ArrowDownwardIcon className='arrow-icon' onClick={() => scrollTo(textRef2)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef2}>
+        <h3><u>What about the population?</u></h3>
+        <p>This may already seem like an extraordinary amount of guns for one country to own and this tree map chart reflects the distribution of guns around the world. However, population is another factor.</p>
+        <p>Let us look at the rate of civilian owned guns in each country per 100 persons to demonstrate how many guns there are per capita.</p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(worldMapRef)}/>
       </div>
 
       <div className='height-90 middle-text' ref={worldMapRef}>
@@ -156,8 +168,18 @@ export default () => {
         <MapLegend/>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 2)}/>
         <Dialogs openDialogs={openDialogs} id='2' close={() => setDialog(false, 2)} content={
-          <span>test2</span>
+          <div className='dialog-text'></div>
         }/>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef3)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef3}>
+        <h3><u>Conclusions</u></h3>
+        <p>As you can see, America stands out strongly once again, having over 1.2 guns for every person in the country. The 2nd worst country (Yemen) has less than half of that at ~0.53.</p>
+        <p>Of the ~857,000,000 civilian held guns in the world, 393,347,000 (~46%) are owned by Americans. ~4% of the world live in the US.</p>
+        <p>4% of the world own 46% of the world’s guns!</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(scatterRef)}/>
@@ -175,7 +197,7 @@ export default () => {
         </ScrollAnimation>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 3)}/>
         <Dialogs openDialogs={openDialogs} id='3' close={() => setDialog(false, 3)} content={
-          <span>test3</span>
+          <div className='dialog-text'></div>
         }/>
       </div>
       <div className="arrow bounce">
@@ -194,7 +216,7 @@ export default () => {
         </ScrollAnimation>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 4)}/>
         <Dialogs openDialogs={openDialogs} id='4' close={() => setDialog(false, 4)} content={
-          <span>test4</span>
+          <div className='dialog-text'></div>
         }/>
       </div>
       <div className="arrow bounce">
@@ -213,7 +235,7 @@ export default () => {
         </ScrollAnimation>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 5)}/>
         <Dialogs openDialogs={openDialogs} id='5' close={() => setDialog(false, 5)} content={
-          <span>test5</span>
+          <div className='dialog-text'></div>
         }/>
       </div>
       <div className="arrow bounce">
@@ -232,7 +254,7 @@ export default () => {
         </ScrollAnimation>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 6)}/>
         <Dialogs openDialogs={openDialogs} id='6' close={() => setDialog(false, 6)} content={
-          <span>test6</span>
+          <div className='dialog-text'></div>
         }/>
       </div>
       <div className="arrow bounce">
@@ -251,7 +273,7 @@ export default () => {
         </ScrollAnimation>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 7)}/>
         <Dialogs openDialogs={openDialogs} id='7' close={() => setDialog(false, 7)} content={
-          <span>test7</span>
+          <div className='dialog-text'></div>
         }/>
       </div>
       <div className="arrow bounce">
@@ -270,7 +292,7 @@ export default () => {
         </ScrollAnimation>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 8)}/>
         <Dialogs openDialogs={openDialogs} id='8' close={() => setDialog(false, 8)} content={
-          <span>test8</span>
+          <div className='dialog-text'></div>
         }/>
       </div>
     </div>

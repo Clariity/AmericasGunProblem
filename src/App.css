@@ -48,6 +48,19 @@ html {
   right: 30px;
 }
 
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: rgba(255, 255, 255, 0.897);
+}
+a:active {
+  color: white;
+}
+
 /* ----------------------- World Map ---------------------- */
 .rsm-svg {
   max-height: 90vh;
@@ -158,4 +171,17 @@ html {
 .scatter-background {
   background-color: white;
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* ----------------------- Dialog Title ---------------------- */
+.MuiTypography-h6 {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: calc(10px + 2vmin) !important;
+  text-align: center;
+}
+
+.dialog-text {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: calc(10px + 1vmin) !important;
+  text-align: center;
 }
