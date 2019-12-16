@@ -10,11 +10,13 @@ import ScatterPlotIcon from '@material-ui/icons/ScatterPlot';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import TimelineIcon from '@material-ui/icons/Timeline';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
 import ApexChart from "react-apexcharts";
 import chart from "tui-chart";
 import ScrollAnimation from 'react-animate-on-scroll';
 import MapChart from "./components/MapChart";
+import MapLegend from './components/MapLegend';
 import ReactTooltip from "react-tooltip";
 
 import { treeMapData, treeMapOptions, treeMapTheme } from './data/treemapData'
@@ -28,11 +30,12 @@ import { options6, series6 } from './data/bar2Data'
 import "tui-chart/dist/tui-chart.css";
 import "animate.css/animate.min.css";
 import './App.css';
-import MapLegend from './components/MapLegend';
+import Dialogs from './components/Dialogs';
 
 export default () => {
   const [content, setContent] = useState("");
   const [rendered, setRendered] = useState(false);
+  const [openDialogs, setOpenDialogs] = useState([false,false,false,false,false,false,false,false,false]);
   const titleRef = useRef()
   const treeMapRef = useRef()
   const worldMapRef = useRef()
@@ -42,6 +45,16 @@ export default () => {
   const barRef = useRef()
   const lineRef = useRef()
   const barRef2 = useRef()
+  const introRef = useRef()
+  const introRef2 = useRef()
+  const textRef = useRef()
+  const textRef2 = useRef()
+  const textRef3 = useRef()
+  const textRef4 = useRef()
+  const textRef5 = useRef()
+  const textRef6 = useRef()
+  const textRef7 = useRef()
+  const textRef8 = useRef()
 
   useEffect(() => {
     if (!rendered) {
@@ -51,6 +64,13 @@ export default () => {
       setRendered(true)
     }
   }, [rendered])
+
+  const setDialog = (state, index) => {
+    let newDialogs = [...openDialogs]
+    newDialogs[index] = state
+    setOpenDialogs(newDialogs)
+    console.log(openDialogs)
+  }
 
   const scrollTo = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -67,31 +87,82 @@ export default () => {
         <div className="floating-nav-button" onClick={() => scrollTo(lineRef)}><TimelineIcon/></div>
         <div className="floating-nav-button" onClick={() => scrollTo(barRef2)}><InsertChartIcon/></div>
       </div>
+
       <div className='height-90 middle-text' ref={titleRef}>
         <ScrollAnimation animateIn='fadeIn' delay={200} duration={2}>
           <h1>How Bad Is America's Gun Problem?</h1>
         </ScrollAnimation>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(treeMapRef)}>
-        <ArrowDownwardIcon className="arrow-icon"/>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(introRef)}/>
       </div>
+
+      <div className='height-90 middle-text side-margins' ref={introRef}>
+        <h3><u>How to use the site</u></h3>
+        <p>Scroll down to progress through the story or click on the arrows to scroll everything into view for you.</p>
+        <h4><u>Quick Navigation</u></h4>
+        <p>Want to see a chart again? Scroll directly to them with the navigation bar on the left.</p>
+        <h4><u>Source Information</u></h4>
+        <p>Every chart will have an information icon by it like the one below. Clicking on this will reveal all additional chart information and sources.</p>
+        <InfoOutlinedIcon className='info-icon' data-tip='Click for information' onClick={() => setDialog(true, 0)}/>
+        <Dialogs openDialogs={openDialogs} id='0' close={() => setDialog(false, 0)} content={
+          <span>Here is where you will see the additional chart information and sources for the data.</span>
+        }/>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(introRef2)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={introRef2}>
+        <p>
+          There are often stories in the news about shootings in America. In fact in 2019 there have been more mass shootings in America than days in the year <a href="https://www.cbsnews.com/news/mass-shootings-2019-more-mass-shootings-than-days-so-far-this-year/">as reported by CBS news</a>.
+        </p>
+        <p>
+          However, looking at the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title">statistics from 2016</a> (most complete data), there are 19 countries that are equal to or above America in terms of deaths by firearm per 100,000 persons.
+        </p>
+        <p>
+          That means ~1/10 countries have worse death rates by firearm than America, so how bad is America's gun problem really?
+        </p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef}>
+        <h3><u>Gun Numbers</u></h3>
+        <p>To start to answer this question, let us first look at some factors that will help us to answer questions along the way.</p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(treeMapRef)}/>
+      </div>
+
       <div className='height-90 middle-text' ref={treeMapRef}>
-        <ScrollAnimation animateIn='bounceIn' className="scatter-background">
+        <ScrollAnimation animateIn='bounceIn'>
           Where Are The World's Guns?
-          <div id="chart-area" />
+          <div id="chart-area" className="scatter-background"/>
         </ScrollAnimation>
+        <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 1)}/>
+        <Dialogs openDialogs={openDialogs} id='1' close={() => setDialog(false, 1)} content={
+          <span>test1</span>
+        }/>
       </div>
-      <div className='arrow bounce' onClick={() => scrollTo(worldMapRef)}>
-        <ArrowDownwardIcon className='arrow-icon'/>
+      <div className='arrow bounce'>
+        <ArrowDownwardIcon className='arrow-icon' onClick={() => scrollTo(worldMapRef)}/>
       </div>
+
       <div className='height-90 middle-text' ref={worldMapRef}>
         <MapChart setTooltipContent={setContent} />
         <ReactTooltip>{content}</ReactTooltip>
         <MapLegend/>
+        <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 2)}/>
+        <Dialogs openDialogs={openDialogs} id='2' close={() => setDialog(false, 2)} content={
+          <span>test2</span>
+        }/>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(scatterRef)}>
-        <ArrowDownwardIcon className="arrow-icon"/>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(scatterRef)}/>
       </div>
+
       <div className='height-90 middle-text' ref={scatterRef}>
         <ScrollAnimation animateIn='fadeInRight' className="scatter-background">
           <ApexChart 
@@ -102,10 +173,15 @@ export default () => {
             height="800" 
           />
         </ScrollAnimation>
+        <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 3)}/>
+        <Dialogs openDialogs={openDialogs} id='3' close={() => setDialog(false, 3)} content={
+          <span>test3</span>
+        }/>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(scatterRef2)}>
-        <ArrowDownwardIcon className="arrow-icon"/>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(scatterRef2)}/>
       </div>
+
       <div className='height-90 middle-text' ref={scatterRef2}>
         <ScrollAnimation animateIn='fadeInLeft' className="scatter-background">
           <ApexChart 
@@ -116,10 +192,15 @@ export default () => {
             height="800" 
           />
         </ScrollAnimation>
+        <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 4)}/>
+        <Dialogs openDialogs={openDialogs} id='4' close={() => setDialog(false, 4)} content={
+          <span>test4</span>
+        }/>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(scatterRef3)}>
-        <ArrowDownwardIcon className="arrow-icon"/>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(scatterRef3)}/>
       </div>
+
       <div className='height-90 middle-text' ref={scatterRef3}>
         <ScrollAnimation animateIn='zoomIn' className="scatter-background">
           <ApexChart 
@@ -130,10 +211,15 @@ export default () => {
             height="800" 
           />
         </ScrollAnimation>
+        <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 5)}/>
+        <Dialogs openDialogs={openDialogs} id='5' close={() => setDialog(false, 5)} content={
+          <span>test5</span>
+        }/>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(barRef)}>
-        <ArrowDownwardIcon className="arrow-icon"/>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(barRef)}/>
       </div>
+
       <div className='height-90 middle-text' ref={barRef}>
         <ScrollAnimation animateIn='zoomIn' className="scatter-background">
           <ApexChart 
@@ -144,10 +230,15 @@ export default () => {
             height="800" 
           />
         </ScrollAnimation>
+        <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 6)}/>
+        <Dialogs openDialogs={openDialogs} id='6' close={() => setDialog(false, 6)} content={
+          <span>test6</span>
+        }/>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(lineRef)}>
-        <ArrowDownwardIcon className="arrow-icon"/>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(lineRef)}/>
       </div>
+
       <div className='height-90 middle-text' ref={lineRef}>
         <ScrollAnimation animateIn='slideInLeft' className="scatter-background">
           <ApexChart 
@@ -158,10 +249,15 @@ export default () => {
             height="800" 
           />
         </ScrollAnimation>
+        <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 7)}/>
+        <Dialogs openDialogs={openDialogs} id='7' close={() => setDialog(false, 7)} content={
+          <span>test7</span>
+        }/>
       </div>
-      <div className="arrow bounce" onClick={() => scrollTo(barRef2)}>
-        <ArrowDownwardIcon className="arrow-icon"/>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(barRef2)}/>
       </div>
+
       <div className='height-90 middle-text' ref={barRef2}>
         <ScrollAnimation animateIn='slideInRight' className="scatter-background">
           <ApexChart 
@@ -172,6 +268,10 @@ export default () => {
             height="800" 
           />
         </ScrollAnimation>
+        <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 8)}/>
+        <Dialogs openDialogs={openDialogs} id='8' close={() => setDialog(false, 8)} content={
+          <span>test8</span>
+        }/>
       </div>
     </div>
   );

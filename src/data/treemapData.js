@@ -7,7 +7,7 @@ export const treeMapTheme = {
 };
 
 export const treeMapOptions = {
-  chart: { width: 1400, height: 800 },
+  chart: { width: 1600, height: 900 },
   series: { showLabel: true, zoomable: true, useLeafLabel: false },
   tooltip: { suffix: "guns", offsetY: -40},
   chartExportMenu: { visible: false }

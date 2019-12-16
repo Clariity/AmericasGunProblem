@@ -23,6 +23,29 @@ html {
 
 .height-90 {
   height: 90vh;
+  position: relative;
+}
+
+.side-margins {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.info-icon {
+  font-size: 100px !important;
+}
+.info-icon:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+.child {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
 }
 
 /* ----------------------- World Map ---------------------- */
@@ -60,6 +83,7 @@ html {
 .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
 @keyframes bounce {

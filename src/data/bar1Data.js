@@ -15,7 +15,7 @@ export const options4 = {
       return  '<div class="arrow_box">' +
                 '<span><b>' + dataLabels[dataPointIndex] + '</b></span>' +
                 '<br/>' +
-                '<span> Gun Rate: ' + series[seriesIndex][dataPointIndex] + '</span>' +
+                '<span> Death Rate: ' + series[seriesIndex][dataPointIndex] + '</span>' +
               '</div>'
     }
   },
