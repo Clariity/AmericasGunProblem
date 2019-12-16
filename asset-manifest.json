@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/AmericasGunProblem/static/css/main.543df91a.chunk.css",
+    "main.js": "/AmericasGunProblem/static/js/main.6aa60d8c.chunk.js",
+    "main.js.map": "/AmericasGunProblem/static/js/main.6aa60d8c.chunk.js.map",
+    "runtime-main.js": "/AmericasGunProblem/static/js/runtime-main.cd3dbdd7.js",
+    "runtime-main.js.map": "/AmericasGunProblem/static/js/runtime-main.cd3dbdd7.js.map",
+    "static/css/2.dfad446f.chunk.css": "/AmericasGunProblem/static/css/2.dfad446f.chunk.css",
+    "static/js/2.ed78b0d4.chunk.js": "/AmericasGunProblem/static/js/2.ed78b0d4.chunk.js",
+    "static/js/2.ed78b0d4.chunk.js.map": "/AmericasGunProblem/static/js/2.ed78b0d4.chunk.js.map",
+    "index.html": "/AmericasGunProblem/index.html",
+    "precache-manifest.24d1248bb4e5e8a36860eb65a2912bd6.js": "/AmericasGunProblem/precache-manifest.24d1248bb4e5e8a36860eb65a2912bd6.js",
+    "service-worker.js": "/AmericasGunProblem/service-worker.js",
+    "static/css/2.dfad446f.chunk.css.map": "/AmericasGunProblem/static/css/2.dfad446f.chunk.css.map",
+    "static/css/main.543df91a.chunk.css.map": "/AmericasGunProblem/static/css/main.543df91a.chunk.css.map",
+    "static/js/2.ed78b0d4.chunk.js.LICENSE": "/AmericasGunProblem/static/js/2.ed78b0d4.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd3dbdd7.js",
+    "static/css/2.dfad446f.chunk.css",
+    "static/js/2.ed78b0d4.chunk.js",
+    "static/css/main.543df91a.chunk.css",
+    "static/js/main.6aa60d8c.chunk.js"
+  ]
+}
