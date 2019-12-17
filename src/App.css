@@ -48,23 +48,27 @@ html {
   right: 30px;
 }
 
-a:link {
-  color: white;
+.interactivity {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  max-width: 200px;
+  margin-top: -175px;
 }
-a:visited {
-  color: white;
-}
-a:hover {
-  color: rgba(255, 255, 255, 0.897);
-}
-a:active {
-  color: white;
+.interactivity2 {
+  position: absolute;
+  top: 30%;
+  right: 30px;
+  max-width: 200px;
+  margin-top: -175px;
 }
 
 /* ----------------------- World Map ---------------------- */
 .rsm-svg {
   max-height: 90vh;
   width: 100%;
+  margin-top: -60px;
+  margin-bottom: -60px;
 }
 .worldmap-legend {
   display: flex;
@@ -78,6 +82,10 @@ a:active {
 .worldmap-legend-number {
   margin-right: 15px;
   margin-left: 15px;
+}
+
+.rsm-geographies {
+  height: 100%;
 }
 
 /* ----------------------- Arrow ---------------------- */
@@ -173,6 +181,12 @@ a:active {
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
+.apexcharts-menu.open,
+.exportSVG {
+  color: black;
+  text-align: center;
+}
+
 /* ----------------------- Dialog Title ---------------------- */
 .MuiTypography-h6 {
   font-family: 'Roboto Condensed', sans-serif !important;
@@ -180,8 +194,13 @@ a:active {
   text-align: center;
 }
 
+.MuiDialog-paperWidthSm {
+  max-width: 1700px !important;
+}
+
 .dialog-text {
   font-family: 'Roboto Condensed', sans-serif !important;
   font-size: calc(10px + 1vmin) !important;
   text-align: center;
+  color: black !important;
 }

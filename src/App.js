@@ -55,6 +55,13 @@ export default () => {
   const textRef6 = useRef()
   const textRef7 = useRef()
   const textRef8 = useRef()
+  const textRef9 = useRef()
+  const textRef10 = useRef()
+  const textRef11 = useRef()
+  const textRef12 = useRef()
+  const textRef13 = useRef()
+  const textRef14 = useRef()
+  const textRef15 = useRef()
 
   useEffect(() => {
     if (!rendered) {
@@ -131,9 +138,9 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text side-margins' ref={textRef}>
-        <h3><u>Gun Numbers</u></h3>
-        <p>To start to answer this question, let us first look at some factors that will help us to answer questions along the way.</p>
-        <p>America is notorious for the sheer volume of firearms it owns. So how do these numbers stack up against the rest of the world. How many of the world's civilian owned gun are in America?</p>
+        <h3><u>Where Are The World's Guns?</u></h3>
+        <p>To start to answer the question on how bad Americas gun problem is, let us first look at some factors that will help us to answer questions along the way.</p>
+        <p>America is notorious for the sheer volume of firearms it owns. So how do these numbers stack up against the rest of the world? How many of the world's civilian owned gun are in America?</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(treeMapRef)}/>
@@ -141,12 +148,26 @@ export default () => {
 
       <div className='height-90 middle-text' ref={treeMapRef}>
         <ScrollAnimation animateIn='bounceIn'>
-          Where Are The World's Guns?
+          <h3 style={{"marginBottom": "15px"}}>Global Distribution of Civilian Held Firearms</h3>
           <div id="chart-area" className="scatter-background"/>
         </ScrollAnimation>
+        <div className='interactivity'>
+          <h5><u>Interactivity</u></h5>
+          <p>Click on regions to zoom in to sub regions and zoom again for countries</p>
+        </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 1)}/>
         <Dialogs openDialogs={openDialogs} id='1' close={() => setDialog(false, 1)} content={
-          <div className='dialog-text'></div>
+          <div className='dialog-text'>
+            <b>Sources</b>
+            <p>
+              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf'>
+                http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf
+              </a>
+            </p>
+            <b>Additional Information</b>
+            <p>Some countries or regions have very low gun numbers and as such their labels might overflow and not be readable.</p>
+            <p>Tool tips have been added to address this. By hovering over a section you can clearly see the name and value for that section.</p>
+          </div>
         }/>
       </div>
       <div className='arrow bounce'>
@@ -156,19 +177,33 @@ export default () => {
       <div className='height-90 middle-text side-margins' ref={textRef2}>
         <h3><u>What about the population?</u></h3>
         <p>This may already seem like an extraordinary amount of guns for one country to own and this tree map chart reflects the distribution of guns around the world. However, population is another factor.</p>
-        <p>Let us look at the rate of civilian owned guns in each country per 100 persons to demonstrate how many guns there are per capita.</p>
+        <p>Let us look at the number of civilian owned guns in each country per 100 persons to demonstrate how many guns there are per capita.</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(worldMapRef)}/>
       </div>
 
       <div className='height-90 middle-text' ref={worldMapRef}>
+        <h3 style={{"marginBottom": "15px"}}>Number of Civilian Held Firearms per 100 Persons</h3>
         <MapChart setTooltipContent={setContent} />
         <ReactTooltip>{content}</ReactTooltip>
         <MapLegend/>
+        <div className='interactivity2'>
+          <h5><u>Interactivity</u></h5>
+          <p>Hover over countries and regions to see their name and value</p>
+        </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 2)}/>
         <Dialogs openDialogs={openDialogs} id='2' close={() => setDialog(false, 2)} content={
-          <div className='dialog-text'></div>
+          <div className='dialog-text'>
+          <b>Sources</b>
+          <p>
+            <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf'>
+              http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf
+            </a>
+          </p>
+          <b>Additional Information</b>
+          <p>Countries and territories highlighted in grey indicate that there was no data for these regions.</p>
+        </div>
         }/>
       </div>
       <div className="arrow bounce">
@@ -176,67 +211,243 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text side-margins' ref={textRef3}>
-        <h3><u>Conclusions</u></h3>
+        <h3><u>Conclusions on Gun Numbers</u></h3>
         <p>As you can see, America stands out strongly once again, having over 1.2 guns for every person in the country. The 2nd worst country (Yemen) has less than half of that at ~0.53.</p>
+        <p>There are more civilian held guns in America than there are civilians!</p>
         <p>Of the ~857,000,000 civilian held guns in the world, 393,347,000 (~46%) are owned by Americans. ~4% of the world live in the US.</p>
         <p>4% of the world own 46% of the world’s guns!</p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef4)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef4}>
+        <h3><u>How Large of a Factor is Gun Numbers on Firearm Death Rates?</u></h3>
+        <p>With such extreme gun prevalence, it would be interesting to see the correlation between the rate of civilian held firearms and the rate of deaths by firearm.</p>
+        <p>Do more guns cause more firearm deaths?</p>
+        <p>To answer this, let us see how gun prevalence affects gun violence globally.</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(scatterRef)}/>
       </div>
 
       <div className='height-90 middle-text' ref={scatterRef}>
-        <ScrollAnimation animateIn='fadeInRight' className="scatter-background">
+        <ScrollAnimation animateIn='fadeInRight' >
+          <h3 style={{"marginBottom": "15px"}}>The Effect of Gun Prevalence on Firearm Death Rates</h3>
           <ApexChart 
             options={options} 
             series={series} 
             type="line" 
             width="1400"
             height="800" 
+            className="scatter-background"
           />
         </ScrollAnimation>
+        <div className='interactivity'>
+          <h5><u>Interactivity</u></h5>
+          <p>Click the information icon below to view all interactivity</p>
+        </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 3)}/>
         <Dialogs openDialogs={openDialogs} id='3' close={() => setDialog(false, 3)} content={
-          <div className='dialog-text'></div>
+          <div className='dialog-text'>
+            <b>Sources</b>
+            <p>
+              X-Axis:
+              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf'>
+                http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf
+              </a>
+            </p>
+            <p>
+              Y-Axis:
+              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title'>
+                https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title
+              </a>
+            </p>
+            <b>Interactivity</b>
+            <ul style={{"textAlign": "left"}}>
+              <li>
+                Hover: Hover over individual points to see the country and XY values. 
+              </li>
+              <li>
+                Zoom: Click and hold to draw a square over the area of the chart you wish to zoom in on. To get back, click the house icon in the top right of the chart. 
+                Make sure the magnifying glass icon is selected instead of the hand icon in order to use this feature. 
+              </li>
+              <li>
+                Highlighting: To highlight and make specific regions stand out, simply hover over them in the legend. 
+              </li>
+              <li>
+                Removal: To remove a region from the graph, click on its colour in the chart legend. Click on it again to put it back. Multiple regions and the trendline can be removed by clicking on each in turn. 
+              </li>
+            </ul>
+            <b>Additional Information</b>
+            <p>Unfortunately the trendline doesn't re-adjust its value when countries are removed or the chart is zoomed in, only its position.</p>
+          </div>
         }/>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef5)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef5}>
+        <h3><u>What Does This Tell Us?</u></h3>
+        <p>There is a surprisingly low correlation between the prevalence of civilian held firearms and death rates by firearm (0.12).</p>
+        <p>But what is happening with all those Central American countries with such high death rates?</p>
+        <p>It turns out there is a common theme with these countries... They are all <a href="https://obamawhitehouse.archives.gov/the-press-office/2016/09/12/presidential-determination-major-drug-transit-or-major-illicit-drug">major drug transit or major illicit drug producing countries</a>.</p>
+        <p>This is a major external factor causing a significant rise in gun violence statistics.</p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef6)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef6}>
+        <h3><u>So What Happens When We Remove Outliers?</u></h3>
+        <p>Greenland has been identified as an outlier due to having such a small population that any incident causes a heavy skew in the data.</p>
+        <p>So what happens to the correlation if we remove these 22 drug transit and producing countries along with any outliers?</p>
+        <p>It increases to 0.14...?</p>
+        <p>This indicates that something is heavily affecting the data even with 23 countries removed, so what happens if we then remove America too?</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(scatterRef2)}/>
       </div>
 
       <div className='height-90 middle-text' ref={scatterRef2}>
-        <ScrollAnimation animateIn='fadeInLeft' className="scatter-background">
+        <ScrollAnimation animateIn='fadeInLeft'>
+          <h3 style={{"marginBottom": "15px"}}>The Effect of Gun Prevalence on Firearm Death Rates (Adjusted)</h3>
           <ApexChart 
             options={options2} 
             series={series2} 
             type="line" 
             width="1400"
             height="800" 
+            className="scatter-background"
           />
         </ScrollAnimation>
+        <div className='interactivity'>
+          <h5><u>Interactivity</u></h5>
+          <p>Click the information icon below to view all interactivity</p>
+        </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 4)}/>
         <Dialogs openDialogs={openDialogs} id='4' close={() => setDialog(false, 4)} content={
-          <div className='dialog-text'></div>
+          <div className='dialog-text'>
+            <b>Sources</b>
+            <p>
+              X-Axis:
+              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf'>
+                http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf
+              </a>
+            </p>
+            <p>
+              Y-Axis:
+              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title'>
+                https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title
+              </a>
+            </p>
+            <p>
+              Drug Transit and Producing Countries:
+              <a href='https://obamawhitehouse.archives.gov/the-press-office/2016/09/12/presidential-determination-major-drug-transit-or-major-illicit-drug'>
+                https://obamawhitehouse.archives.gov/the-press-office/2016/09/12/presidential-determination-major-drug-transit-or-major-illicit-drug
+              </a>
+            </p>
+            <b>Interactivity</b>
+            <ul style={{"textAlign": "left"}}>
+              <li>
+                Hover: Hover over individual points to see the country and XY values. 
+              </li>
+              <li>
+                Zoom: Click and hold to draw a square over the area of the chart you wish to zoom in on. To get back, click the house icon in the top right of the chart. 
+                Make sure the magnifying glass icon is selected instead of the hand icon in order to use this feature. 
+              </li>
+              <li>
+                Highlighting: To highlight and make specific regions stand out, simply hover over them in the legend. 
+              </li>
+              <li>
+                Removal: To remove a region from the graph, click on its colour in the chart legend. Click on it again to put it back. Multiple regions and the trendline can be removed by clicking on each in turn. 
+              </li>
+            </ul>
+            <b>Additional Information</b>
+            <p>Unfortunately the trendline doesn't re-adjust its value when countries are removed or the chart is zoomed in, only its position.</p>
+          </div>
         }/>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef7)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef7}>
+        <h3><u>Conclusions on Gun Numbers affecting Firearm Death Rates?</u></h3>
+        <p>The effect of also removing America takes the correlation from 0.14 to 0.003.</p>
+        <p>The rest of the world show that there is no correlation between gun prevalence and firearm death rates.</p>
+        <p>With the correlation being affected this much from America alone, it starts to indicate the severity of America's problem with gun violence.</p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef8)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef8}>
+        <h3><u>What is the Extent of America's Gun Problem in Comparison to the Well Developed World?</u></h3>
+        <p>We have now identified that America has a large problem with gun violence, and it turns out America really doesn't have an excuse.</p>
+        <p>America is in the top 6% of the world in terms of development based on their <a href='http://hdr.undp.org/en/indicators/137506'>Human Development Index</a> (2016).</p>
+        <p>If we take a look at the top 20% of well developed countries in the world, we see a common trend in gun violence with the exception of one country...</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(scatterRef3)}/>
       </div>
 
       <div className='height-90 middle-text' ref={scatterRef3}>
-        <ScrollAnimation animateIn='zoomIn' className="scatter-background">
+        <ScrollAnimation animateIn='zoomIn'>
+          <h3 style={{"marginBottom": "15px"}}>The Effect of Human Development on Firearm Death Rates For Top 20% of Countries</h3>
           <ApexChart 
             options={options3} 
             series={series3} 
             type="scatter" 
             width="1400"
-            height="800" 
+            height="800"
+            className="scatter-background" 
           />
         </ScrollAnimation>
+        <div className='interactivity'>
+          <h5><u>Interactivity</u></h5>
+          <p>Click the information icon below to view all interactivity</p>
+        </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 5)}/>
         <Dialogs openDialogs={openDialogs} id='5' close={() => setDialog(false, 5)} content={
-          <div className='dialog-text'></div>
+          <div className='dialog-text'>
+            <b>Sources</b>
+            <p>
+              X-Axis:
+              <a href='http://hdr.undp.org/en/indicators/137506'>
+                http://hdr.undp.org/en/indicators/137506
+              </a>
+            </p>
+            <p>
+              Y-Axis:
+              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title'>
+                https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title
+              </a>
+            </p>
+            <b>Interactivity</b>
+            <ul style={{"textAlign": "left"}}>
+              <li>
+                Hover: Hover over individual points to see the country and XY values. 
+              </li>
+              <li>
+                Zoom: Click and hold to draw a square over the area of the chart you wish to zoom in on. To get back, click the house icon in the top right of the chart. 
+                Make sure the magnifying glass icon is selected instead of the hand icon in order to use this feature. 
+              </li>
+            </ul>
+            <b>Additional Information</b>
+            <p>The plot point for America has been highlighted in red to make it easier to see.</p>
+            <p>Human Development Index is scored between 0 and 1.</p>
+          </div>
         }/>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef9)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef9}>
+        <h3><u>If that wasn't clear enough....</u></h3>
+        <p>Here is the same data but ordered to better show the jump to America from even the 2nd worst country...</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(barRef)}/>
@@ -252,9 +463,29 @@ export default () => {
             height="800" 
           />
         </ScrollAnimation>
+        <div className='interactivity'>
+          <h5><u>Interactivity</u></h5>
+          <p>Hover over each bar to see the country and Y-Axis value</p>
+        </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 6)}/>
         <Dialogs openDialogs={openDialogs} id='6' close={() => setDialog(false, 6)} content={
-          <div className='dialog-text'></div>
+          <div className='dialog-text'>
+            <b>Sources</b>
+            <p>
+              X-Axis:
+              <a href='http://hdr.undp.org/en/indicators/137506'>
+                http://hdr.undp.org/en/indicators/137506
+              </a>
+            </p>
+            <p>
+              Y-Axis:
+              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title'>
+                https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title
+              </a>
+            </p>
+            <b>Additional Information</b>
+            <p>The countries along the X-Axis are still the same top 20% of countries by Human Development Index.</p>
+          </div>
         }/>
       </div>
       <div className="arrow bounce">
@@ -294,6 +525,14 @@ export default () => {
         <Dialogs openDialogs={openDialogs} id='8' close={() => setDialog(false, 8)} content={
           <div className='dialog-text'></div>
         }/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef14}>
+        <h3><u>So What, Why is this important to me?</u></h3>
+        <p>Thousands of lives could be easily saved if America would just follow in the footsteps of countries that have realised they have a problem and acted upon it.</p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef15)}/>
       </div>
     </div>
   );

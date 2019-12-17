@@ -86,7 +86,9 @@ const dataLabels = [{
     ["United Kingdom",0.92,0.3],
     ["Japan",0.907,0.2],
     ["Singapore",0.93,0.1],
-    ["Hong Kong SAR, China",0.93,0]
+    ["Hong Kong SAR, China",0.93,0],
+    ["Liechtenstein",0.915,0],
+    ["Cyprus",0.867,1.7]
   ]
 }]
 
@@ -130,6 +132,8 @@ export const series3 = [{
     [0.92,0.3],
     [0.907,0.2],
     [0.93,0.1],
-    [0.93,0]
+    [0.93,0],
+    [0.915,0],
+    [0.867,1.7]
   ]
 }]
