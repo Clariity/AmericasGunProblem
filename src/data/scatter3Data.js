@@ -2,6 +2,15 @@ import '../App.css';
 
 export const options3 = {
   chart: {
+    toolbar: {
+      show: true,
+      tools: {
+        zoomin: false,
+        zoomout: false,
+        pan: false,
+      },
+      autoSelected: 'zoom' 
+    },
     zoom: {
       enabled: true,
       type: 'xy'

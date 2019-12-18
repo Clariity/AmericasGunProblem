@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: lightblue;
+  background-color: #225E77;
   color: white;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -68,6 +68,10 @@ html {
 }
 .apexcharts-tooltip-text-label {
   display: none;
+}
+
+a:visited {
+  color: #fff;
 }
 
 /* ----------------------- World Map ---------------------- */

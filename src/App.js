@@ -269,7 +269,6 @@ export default () => {
               </li>
               <li>
                 Zoom: Click and hold to draw a square over the area of the chart you wish to zoom in on. To get back, click the house icon in the top right of the chart. 
-                Make sure the magnifying glass icon is selected instead of the hand icon in order to use this feature. 
               </li>
               <li>
                 Highlighting: To highlight and make specific regions stand out, simply hover over them in the legend. 
@@ -354,7 +353,6 @@ export default () => {
               </li>
               <li>
                 Zoom: Click and hold to draw a square over the area of the chart you wish to zoom in on. To get back, click the house icon in the top right of the chart. 
-                Make sure the magnifying glass icon is selected instead of the hand icon in order to use this feature. 
               </li>
               <li>
                 Highlighting: To highlight and make specific regions stand out, simply hover over them in the legend. 
@@ -431,7 +429,6 @@ export default () => {
               </li>
               <li>
                 Zoom: Click and hold to draw a square over the area of the chart you wish to zoom in on. To get back, click the house icon in the top right of the chart. 
-                Make sure the magnifying glass icon is selected instead of the hand icon in order to use this feature. 
               </li>
             </ul>
             <b>Additional Information</b>
@@ -504,7 +501,7 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text side-margins' ref={textRef11}>
-        <h3><u>Will Gun Control Help? Autralia Case Study</u></h3>
+        <h3><u>Will Gun Control Help? Australia Case Study</u></h3>
         <p>In 1996, Autralia suffered a horrific gun massacre where 35 people were killed. In response to this, the Australian government passed the National Firearms Agreement that tightened gun laws and purchased guns back off its citizens to reduce the number of civilian owned guns.</p>
         <p>Let us examine how this impacted the rate of deaths by firearm...</p>
       </div>
