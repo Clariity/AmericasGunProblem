@@ -123,10 +123,10 @@ export default () => {
 
       <div className='height-90 middle-text side-margins' ref={introRef2}>
         <p>
-          There are often stories in the news about shootings in America. In fact in 2019 there have been more mass shootings in America than days in the year <a href="https://www.cbsnews.com/news/mass-shootings-2019-more-mass-shootings-than-days-so-far-this-year/">as reported by CBS news</a>.
+          There are often stories in the news about shootings in America. In fact in 2019 there have been more mass shootings in America than days in the year <a href="https://www.cbsnews.com/news/mass-shootings-2019-more-mass-shootings-than-days-so-far-this-year/" rel="noopener noreferrer" target="_blank">as reported by CBS news</a>.
         </p>
         <p>
-          However, looking at the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title">statistics from 2016</a> (most complete data), there are 19 countries that are equal to or above America in terms of deaths by firearm per 100,000 persons.
+          However, looking at the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title" rel="noopener noreferrer" target="_blank">statistics from 2016</a> (most complete data), there are 19 countries that are equal to or above America in terms of deaths by firearm per 100,000 persons.
         </p>
         <p>
           That means ~1/10 countries have worse death rates by firearm than America, so how bad is America's gun problem really?
@@ -159,7 +159,7 @@ export default () => {
           <div className='dialog-text'>
             <b>Sources</b>
             <p>
-              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf'>
+              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf' rel="noopener noreferrer" target="_blank">
                 http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf
               </a>
             </p>
@@ -196,7 +196,7 @@ export default () => {
           <div className='dialog-text'>
           <b>Sources</b>
           <p>
-            <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf'>
+            <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf' rel="noopener noreferrer" target="_blank">
               http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf
             </a>
           </p>
@@ -252,7 +252,7 @@ export default () => {
             <b>Sources</b>
             <p>
               X-Axis:
-              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf'>
+              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf' rel="noopener noreferrer" target="_blank">
                 http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf
               </a>
             </p>
@@ -291,7 +291,7 @@ export default () => {
         <h3><u>What Does This Tell Us?</u></h3>
         <p>There is a surprisingly low correlation between the prevalence of civilian held firearms and death rates by firearm (0.12).</p>
         <p>But what is happening with all those Central American countries with such high death rates?</p>
-        <p>It turns out there is a common theme with these countries... They are all <a href="https://obamawhitehouse.archives.gov/the-press-office/2016/09/12/presidential-determination-major-drug-transit-or-major-illicit-drug">major drug transit or major illicit drug producing countries</a>.</p>
+        <p>It turns out there is a common theme with these countries... They are all <a href="https://obamawhitehouse.archives.gov/the-press-office/2016/09/12/presidential-determination-major-drug-transit-or-major-illicit-drug" rel="noopener noreferrer" target="_blank">major drug transit or major illicit drug producing countries</a>.</p>
         <p>This is a major external factor causing a significant rise in gun violence statistics.</p>
       </div>
       <div className="arrow bounce">
@@ -331,19 +331,19 @@ export default () => {
             <b>Sources</b>
             <p>
               X-Axis:
-              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf'>
+              <a href='http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf' rel="noopener noreferrer" target="_blank">
                 http://www.smallarmssurvey.org/fileadmin/docs/Weapons_and_Markets/Tools/Firearms_holdings/SAS-BP-Civilian-held-firearms-annexe.pdf
               </a>
             </p>
             <p>
               Y-Axis:
-              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title'>
+              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title' rel="noopener noreferrer" target="_blank">
                 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title
               </a>
             </p>
             <p>
               Drug Transit and Producing Countries:
-              <a href='https://obamawhitehouse.archives.gov/the-press-office/2016/09/12/presidential-determination-major-drug-transit-or-major-illicit-drug'>
+              <a href='https://obamawhitehouse.archives.gov/the-press-office/2016/09/12/presidential-determination-major-drug-transit-or-major-illicit-drug' rel="noopener noreferrer" target="_blank">
                 https://obamawhitehouse.archives.gov/the-press-office/2016/09/12/presidential-determination-major-drug-transit-or-major-illicit-drug
               </a>
             </p>
@@ -385,7 +385,7 @@ export default () => {
       <div className='height-90 middle-text side-margins' ref={textRef8}>
         <h3><u>What is the Extent of America's Gun Problem in Comparison to the Well Developed World?</u></h3>
         <p>We have now identified that America has a large problem with gun violence, and it turns out America really doesn't have an excuse.</p>
-        <p>America is in the top 6% of the world in terms of development based on their <a href='http://hdr.undp.org/en/indicators/137506'>Human Development Index</a> (2016).</p>
+        <p>America is in the top 6% of the world in terms of development based on their <a href='http://hdr.undp.org/en/indicators/137506' rel="noopener noreferrer" target="_blank">Human Development Index</a> (2016).</p>
         <p>If we take a look at the top 20% of well developed countries in the world, we see a common trend in gun violence with the exception of one country...</p>
       </div>
       <div className="arrow bounce">
@@ -414,13 +414,13 @@ export default () => {
             <b>Sources</b>
             <p>
               X-Axis:
-              <a href='http://hdr.undp.org/en/indicators/137506'>
+              <a href='http://hdr.undp.org/en/indicators/137506' rel="noopener noreferrer" target="_blank">
                 http://hdr.undp.org/en/indicators/137506
               </a>
             </p>
             <p>
               Y-Axis:
-              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title'>
+              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title' rel="noopener noreferrer" target="_blank">
                 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title
               </a>
             </p>
@@ -474,13 +474,13 @@ export default () => {
             <b>Sources</b>
             <p>
               X-Axis:
-              <a href='http://hdr.undp.org/en/indicators/137506'>
+              <a href='http://hdr.undp.org/en/indicators/137506' rel="noopener noreferrer" target="_blank">
                 http://hdr.undp.org/en/indicators/137506
               </a>
             </p>
             <p>
               Y-Axis:
-              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title'>
+              <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title' rel="noopener noreferrer" target="_blank">
                 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143020/#H1-3-JOI180081title
               </a>
             </p>
@@ -533,7 +533,7 @@ export default () => {
           <div className='dialog-text'>
             <b>Sources</b>
             <p>
-              <a href='https://www.gunpolicy.org/firearms/region/australia'>
+              <a href='https://www.gunpolicy.org/firearms/region/australia' rel="noopener noreferrer" target="_blank">
                 https://www.gunpolicy.org/firearms/region/australia
               </a>
             </p>
@@ -549,7 +549,7 @@ export default () => {
       <div className='height-90 middle-text side-margins' ref={textRef12}>
         <h3><u>The Results of Gun Laws</u></h3>
         <p>In 2016, firearm death rates were nearly 1/3rd of what they were 20 years prior.</p>
-        <p>It is predicted that the Australian government's buy back scheme took <a href="https://edition.cnn.com/2012/12/16/opinion/australia-gun-laws/index.html">1/3rd</a> of the national stock of guns and destroyed them.</p>
+        <p>It is predicted that the Australian government's buy back scheme took <a href="https://edition.cnn.com/2012/12/16/opinion/australia-gun-laws/index.html" rel="noopener noreferrer" target="_blank">1/3rd</a> of the national stock of guns and destroyed them.</p>
         <p>What would American death rates by firearm look like if they followed in the footsteps of Autralia and it had the same success?</p>
       </div>
       <div className="arrow bounce">
@@ -577,7 +577,7 @@ export default () => {
           <div className='dialog-text'>
             <b>Sources</b>
             <p>
-              <a href='https://www.gunpolicy.org/firearms/region/australia'>
+              <a href='https://www.gunpolicy.org/firearms/region/australia' rel="noopener noreferrer" target="_blank">
                 https://www.gunpolicy.org/firearms/region/australia
               </a>
             </p>
