@@ -22,7 +22,7 @@ html {
 }
 
 .height-90 {
-  height: 90vh;
+  height: 95vh;
   position: relative;
 }
 
@@ -32,7 +32,7 @@ html {
 }
 
 .info-icon {
-  font-size: 100px !important;
+  font-size: 50px !important;
 }
 .info-icon:hover {
   color: black;
@@ -51,16 +51,28 @@ html {
 .interactivity {
   position: absolute;
   top: 50%;
-  right: 30px;
-  max-width: 200px;
-  margin-top: -175px;
+  right: 10px;
+  max-width: 160px;
+  margin-top: -100px;
+  font-size: 20px;
 }
 .interactivity2 {
   position: absolute;
   top: 30%;
-  right: 30px;
-  max-width: 200px;
-  margin-top: -175px;
+  right: 10px;
+  max-width: 160px;
+  margin-top: -125px;
+  font-size: 20px;
+}
+
+.chart-title {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.chart-title-reduced {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 27px;
 }
 
 .apexcharts-tooltip {
@@ -70,6 +82,13 @@ html {
   display: none;
 }
 
+.no-margin-top {
+  margin-top: 0px;
+}
+
+a {
+  color: rgb(0, 0, 0);
+}
 a:visited {
   color: rgb(0, 0, 0);
 }
@@ -78,8 +97,8 @@ a:visited {
 .rsm-svg {
   max-height: 90vh;
   width: 100%;
-  margin-top: -60px;
-  margin-bottom: -60px;
+  margin-top: -40px;
+  margin-bottom: -40px;
 }
 .worldmap-legend {
   display: flex;
@@ -103,30 +122,29 @@ a:visited {
 .arrow {
   text-align: center;
   color: white;
-  margin-top: 20px;
 }
 .arrow-icon:hover {
   cursor: pointer;
 }
 .arrow-icon {
-  height: 100px !important;
-  width: 100px !important;
+  height: 40px !important;
+  width: 40px !important;
 }
 .bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  -o-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+  -moz-animation: bounce2 2s infinite;
+  -webkit-animation: bounce2 2s infinite;
+  -o-animation: bounce2 2s infinite;
+  animation: bounce2 2s infinite !important;
 }
-@keyframes bounce {
+@keyframes bounce2 {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-5px);
   }
 }
 
@@ -136,12 +154,12 @@ a:visited {
   color: white;
   padding: 5px;
   width: 50px;
-  height: 600px;
+  height: 720px;
   z-index: 100;
   position: fixed;
   top: 50%;
   left: 30px;
-  margin-top: -250px;
+  margin-top: -366px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;

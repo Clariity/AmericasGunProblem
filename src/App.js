@@ -104,12 +104,12 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text side-margins' ref={introRef}>
-        <h3><u>How To Use The Site</u></h3>
-        <p>Scroll down to progress through the story or click on the arrows to scroll everything into view for you.</p>
+        <h3><u>How to use the Site</u></h3>
+        <p className='no-margin-top'>Scroll down to progress through the story or click on the arrows to scroll everything into view.</p>
         <h4><u>Quick Navigation</u></h4>
-        <p>Want to see a chart again? Scroll directly to them with the navigation bar on the left.</p>
+        <p className='no-margin-top'>Want to see a chart again? Scroll directly to it with the navigation bar on the left.</p>
         <h4><u>Source Information</u></h4>
-        <p>Every chart will have an information icon by it like the one below. Clicking on this will reveal all additional chart information and sources.</p>
+        <p className='no-margin-top'>Every chart will have an information icon next to it like the one below. Clicking on this will reveal all additional chart information and sources.</p>
         <InfoOutlinedIcon className='info-icon' data-tip='Click for information' onClick={() => setDialog(true, 0)}/>
         <Dialogs openDialogs={openDialogs} id='0' close={() => setDialog(false, 0)} content={
           <div className='dialog-text'>
@@ -147,11 +147,11 @@ export default () => {
 
       <div className='height-90 middle-text' ref={treeMapRef}>
         <ScrollAnimation animateIn='bounceIn'>
-          <h3 style={{"marginBottom": "15px"}}>Global Distribution of Civilian Held Firearms</h3>
+          <h3 className='chart-title'>Global Distribution of Civilian Held Firearms</h3>
           <div id="chart-area" className="scatter-background"/>
         </ScrollAnimation>
         <div className='interactivity'>
-          <h5><u>Interactivity</u></h5>
+          <p><u>Interactivity</u></p>
           <p>Click on regions to zoom in to sub regions and zoom again for countries</p>
         </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 1)}/>
@@ -183,12 +183,12 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text' ref={worldMapRef}>
-        <h3 style={{"marginBottom": "15px"}}>Number of Civilian Held Firearms per 100 Persons</h3>
+        <h3 className='chart-title'>Number of Civilian Held Firearms per 100 Persons</h3>
         <MapChart setTooltipContent={setContent} />
         <ReactTooltip>{content}</ReactTooltip>
         <MapLegend/>
         <div className='interactivity2'>
-          <h5><u>Interactivity</u></h5>
+          <p><u>Interactivity</u></p>
           <p>Hover over countries and regions to see their name and value</p>
         </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 2)}/>
@@ -232,18 +232,18 @@ export default () => {
 
       <div className='height-90 middle-text' ref={scatterRef}>
         <ScrollAnimation animateIn='fadeInRight' >
-          <h3 style={{"marginBottom": "15px"}}>The Effect of Gun Prevalence on Firearm Death Rates</h3>
+          <h3 className='chart-title'>The Effect of Gun Prevalence on Firearm Death Rates</h3>
           <ApexChart 
             options={options} 
             series={series} 
             type="line" 
-            width="1400"
-            height="800" 
+            width="900"
+            height="550" 
             className="scatter-background"
           />
         </ScrollAnimation>
         <div className='interactivity'>
-          <h5><u>Interactivity</u></h5>
+          <p><u>Interactivity</u></p>
           <p>Click the information icon below to view all interactivity</p>
         </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 3)}/>
@@ -310,18 +310,18 @@ export default () => {
 
       <div className='height-90 middle-text' ref={scatterRef2}>
         <ScrollAnimation animateIn='fadeInLeft'>
-          <h3 style={{"marginBottom": "15px"}}>The Effect of Gun Prevalence on Firearm Death Rates (Adjusted)</h3>
+          <h3 className='chart-title'>The Effect of Gun Prevalence on Firearm Death Rates (Adjusted)</h3>
           <ApexChart 
             options={options2} 
             series={series2} 
             type="line" 
-            width="1400"
-            height="800" 
+            width="900"
+            height="550" 
             className="scatter-background"
           />
         </ScrollAnimation>
         <div className='interactivity'>
-          <h5><u>Interactivity</u></h5>
+          <p><u>Interactivity</u></p>
           <p>Click the information icon below to view all interactivity</p>
         </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 4)}/>
@@ -392,18 +392,18 @@ export default () => {
 
       <div className='height-90 middle-text' ref={scatterRef3}>
         <ScrollAnimation animateIn='zoomIn'>
-          <h3 style={{"marginBottom": "15px"}}>The Effect of Human Development on Firearm Death Rates For Top 20% of Countries</h3>
+          <h3 className='chart-title-reduced'>The Effect of Human Development on Firearm Death Rates For Top 20% of Countries</h3>
           <ApexChart 
             options={options3} 
             series={series3} 
             type="scatter" 
-            width="1400"
-            height="800"
+            width="900"
+            height="550"
             className="scatter-background" 
           />
         </ScrollAnimation>
         <div className='interactivity'>
-          <h5><u>Interactivity</u></h5>
+          <p><u>Interactivity</u></p>
           <p>Click the information icon below to view all interactivity</p>
         </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 5)}/>
@@ -451,18 +451,18 @@ export default () => {
 
       <div className='height-90 middle-text' ref={barRef}>
         <ScrollAnimation animateIn='zoomIn'>
-          <h3 style={{"marginBottom": "15px"}}>Firearm Death Rates For Top 20% of Countries</h3>
+          <h3 className='chart-title'>Firearm Death Rates For Top 20% of Countries</h3>
           <ApexChart 
             options={options4} 
             series={series4} 
             type="bar" 
-            width="1400"
-            height="800" 
+            width="900"
+            height="550" 
             className="scatter-background"
           />
         </ScrollAnimation>
         <div className='interactivity'>
-          <h5><u>Interactivity</u></h5>
+          <p><u>Interactivity</u></p>
           <p>Hover over each bar to see the country and Y-Axis value</p>
         </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 6)}/>
@@ -502,7 +502,7 @@ export default () => {
 
       <div className='height-90 middle-text side-margins' ref={textRef11}>
         <h3><u>Will Gun Control Help? Australia Case Study</u></h3>
-        <p>In 1996, Autralia suffered a horrific gun massacre where 35 people were killed. In response to this, the Australian government passed the National Firearms Agreement that tightened gun laws and purchased guns back off its citizens to reduce the number of civilian owned guns.</p>
+        <p>In 1996, Australia suffered a horrific gun massacre where 35 people were killed. In response to this, the Australian government passed the National Firearms Agreement that tightened gun laws and purchased guns back off its citizens to reduce the number of civilian owned guns.</p>
         <p>Let us examine how this impacted the rate of deaths by firearm...</p>
       </div>
       <div className="arrow bounce">
@@ -511,18 +511,18 @@ export default () => {
 
       <div className='height-90 middle-text' ref={lineRef}>
         <ScrollAnimation animateIn='slideInLeft'>
-          <h3 style={{"marginBottom": "15px"}}>Australia Firearm Death Rates 1979 - 2016</h3>
+          <h3 className='chart-title'>Australia Firearm Death Rates 1979 - 2016</h3>
           <ApexChart 
             options={options5} 
             series={series5} 
             type="line" 
-            width="1400"
-            height="800" 
+            width="900"
+            height="550" 
             className="scatter-background"
           />
         </ScrollAnimation>
         <div className='interactivity'>
-          <h5><u>Interactivity</u></h5>
+          <p><u>Interactivity</u></p>
           <p>Hover over the line to see the X and Y-Axis values at each point</p>
         </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 7)}/>
@@ -547,7 +547,7 @@ export default () => {
         <h3><u>The Results of Gun Laws</u></h3>
         <p>In 2016, firearm death rates were nearly 1/3rd of what they were 20 years prior.</p>
         <p>It is predicted that the Australian government's buy back scheme took <a href="https://edition.cnn.com/2012/12/16/opinion/australia-gun-laws/index.html" rel="noopener noreferrer" target="_blank">1/3rd</a> of the national stock of guns and destroyed them.</p>
-        <p>What would American death rates by firearm look like if they followed in the footsteps of Autralia and it had the same success?</p>
+        <p>What would American death rates by firearm look like if they followed in the footsteps of Australia with same success?</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(barRef2)}/>
@@ -555,18 +555,18 @@ export default () => {
 
       <div className='height-90 middle-text' ref={barRef2}>
         <ScrollAnimation animateIn='slideInRight'>
-          <h3 style={{"marginBottom": "15px"}}>Predicted American Firearm Death Rates</h3>
+          <h3 className='chart-title'>Predicted American Firearm Death Rates</h3>
           <ApexChart 
             options={options6} 
             series={series6} 
             type="bar" 
-            width="1400"
-            height="800" 
+            width="900"
+            height="550" 
             className="scatter-background"
           />
         </ScrollAnimation>
         <div className='interactivity'>
-          <h5><u>Interactivity</u></h5>
+          <p><u>Interactivity</u></p>
           <p>Click the information icon below to view all interactivity</p>
         </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 8)}/>
@@ -602,7 +602,7 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text side-margins' ref={textRef13}>
-        <h3><u>Conclusions on Will Gun Control Help?</u></h3>
+        <h3><u>Conclusions on "Will Gun Control Help?"</u></h3>
         <p>The case study on Australia shows that the introduction of the National Firearms Agreement saw 68% less homicides and 62% less suicides by firearms over the course of 20 years.</p>
         <p>If America saw the same success rates, then in the year 2036 there would be 24,000 fewer deaths by firearm (~37,000 now).</p> 
         <p>That is 66 fewer people per day! (~101 now).</p>
@@ -615,9 +615,10 @@ export default () => {
         <h3><u>So How Bad Is America's Gun Problem?</u></h3>
         <p>Perhaps America's most severe problem with guns is its unwillingness to change.</p>
         <p>Tens of thousands of lives could be easily saved if America would just follow in the footsteps of countries that have realised they have a problem and acted upon it.</p>
-        <p>Not doing anything to save 1 life is a problem, but not trying to save potentially tens of thousands of lives speaks greater volumes.</p>
+        <p>Not doing anything to save one life is a problem, but not trying to save potentially tens of thousands of lives speaks greater volumes.</p>
+        <br/>
+        <h1 style={{"fontSize": "50px"}}>End</h1>
       </div>
-      <h1 style={{"margin": "0px", "paddingBottom": "80px", "fontSize": "50px"}}>Fin</h1>
     </div>
   );
 }
