@@ -154,7 +154,7 @@ html {
   flex-direction: column;
   justify-content: center;
   margin: 5px;
-  text-align: -webkit-center;
+  align-items: center;
 }
 .floating-nav-button:hover {
   cursor: pointer;
