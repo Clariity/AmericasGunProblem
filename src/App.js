@@ -61,7 +61,6 @@ export default () => {
   const textRef12 = useRef()
   const textRef13 = useRef()
   const textRef14 = useRef()
-  const textRef15 = useRef()
 
   useEffect(() => {
     if (!rendered) {
@@ -454,13 +453,15 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text' ref={barRef}>
-        <ScrollAnimation animateIn='zoomIn' className="scatter-background">
+        <ScrollAnimation animateIn='zoomIn'>
+          <h3 style={{"marginBottom": "15px"}}>Firearm Death Rates For Top 20% of Countries</h3>
           <ApexChart 
             options={options4} 
             series={series4} 
             type="bar" 
             width="1400"
             height="800" 
+            className="scatter-background"
           />
         </ScrollAnimation>
         <div className='interactivity'>
@@ -489,51 +490,137 @@ export default () => {
         }/>
       </div>
       <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef10)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef10}>
+        <h3><u>Conclusions on the Extent of America's Gun Problem in Comparison to the Well Developed World</u></h3>
+        <p>America can be seen as a significant outlier in the modern well developed world, with nearly 4 times worse death rates than the next worst country in the selection.</p>
+        <p>With America being such a well developed country, there is no reason why they can't follow the trend set by all the other well developed coutries.</p>
+        <p>It is clear that America is in need of stricter gun control. Let us explore an example showing the effect of stricter gun laws...</p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef11)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef11}>
+        <h3><u>Will Gun Control Help? Autralia Case Study</u></h3>
+        <p>In 1996, Autralia suffered a horrific gun massacre where 35 people were killed. In response to this, the Australian government passed the National Firearms Agreement that tightened gun laws and purchased guns back off its citizens to reduce the number of civilian owned guns.</p>
+        <p>Let us examine how this impacted the rate of deaths by firearm...</p>
+      </div>
+      <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(lineRef)}/>
       </div>
 
       <div className='height-90 middle-text' ref={lineRef}>
-        <ScrollAnimation animateIn='slideInLeft' className="scatter-background">
+        <ScrollAnimation animateIn='slideInLeft'>
+          <h3 style={{"marginBottom": "15px"}}>Australia Firearm Death Rates 1979 - 2016</h3>
           <ApexChart 
             options={options5} 
             series={series5} 
             type="line" 
             width="1400"
             height="800" 
+            className="scatter-background"
           />
         </ScrollAnimation>
+        <div className='interactivity'>
+          <h5><u>Interactivity</u></h5>
+          <p>Hover over the line to see the X and Y-Axis values at each point</p>
+        </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 7)}/>
         <Dialogs openDialogs={openDialogs} id='7' close={() => setDialog(false, 7)} content={
-          <div className='dialog-text'></div>
+          <div className='dialog-text'>
+            <b>Sources</b>
+            <p>
+              <a href='https://www.gunpolicy.org/firearms/region/australia'>
+                https://www.gunpolicy.org/firearms/region/australia
+              </a>
+            </p>
+            <b>Additional Information</b>
+            <p>Gun death rates for this source are calculated in pure numbers compared to age-standardised death rates in the NCBI source used on previous charts. As such, values may vary slightly.</p>
+          </div>
         }/>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef12)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef12}>
+        <h3><u>The Results of Gun Laws</u></h3>
+        <p>In 2016, firearm death rates were nearly 1/3rd of what they were 20 years prior.</p>
+        <p>It is predicted that the Australian government's buy back scheme took <a href="https://edition.cnn.com/2012/12/16/opinion/australia-gun-laws/index.html">1/3rd</a> of the national stock of guns and destroyed them.</p>
+        <p>What would American death rates by firearm look like if they followed in the footsteps of Autralia and it had the same success?</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(barRef2)}/>
       </div>
 
       <div className='height-90 middle-text' ref={barRef2}>
-        <ScrollAnimation animateIn='slideInRight' className="scatter-background">
+        <ScrollAnimation animateIn='slideInRight'>
+          <h3 style={{"marginBottom": "15px"}}>Predicted American Firearm Death Rates</h3>
           <ApexChart 
             options={options6} 
             series={series6} 
             type="bar" 
             width="1400"
             height="800" 
+            className="scatter-background"
           />
         </ScrollAnimation>
+        <div className='interactivity'>
+          <h5><u>Interactivity</u></h5>
+          <p>Click the information icon below to view all interactivity</p>
+        </div>
         <InfoOutlinedIcon className='info-icon child' data-tip='Click for information' onClick={() => setDialog(true, 8)}/>
         <Dialogs openDialogs={openDialogs} id='8' close={() => setDialog(false, 8)} content={
-          <div className='dialog-text'></div>
+          <div className='dialog-text'>
+            <b>Sources</b>
+            <p>
+              <a href='https://www.gunpolicy.org/firearms/region/australia'>
+                https://www.gunpolicy.org/firearms/region/australia
+              </a>
+            </p>
+            <b>Interactivity</b>
+            <ul style={{"textAlign": "left"}}>
+              <li>
+                Hover: Hover over individual parts of the stacked bars to see their category name and Y-Axis values in a tooltip. 
+              </li>
+              <li>
+                Highlighting: To highlight and make specific categories stand out, simply hover over them in the legend. 
+              </li>
+              <li>
+                Removal: To remove a cateory from the graph, click on its colour in the chart legend. Click on it again to put it back. Multiple categories can be removed by clicking on each in turn. 
+              </li>
+            </ul>
+            <b>Additional Information</b>
+            <p>To better see values for "Other", remove "Homocide" and "Suicide" in the legend.</p>
+            <p>Gun death rates for this source are calculated in pure numbers compared to age-standardised death rates in the NCBI source used on previous charts. As such, values may vary slightly.</p>
+            <p>America's 2036 prediction was calculated assuming America would follow the same rate of decrease in death rate as Australia did over 20 years.</p>
+          </div>
         }/>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef13)}/>
+      </div>
+
+      <div className='height-90 middle-text side-margins' ref={textRef13}>
+        <h3><u>Conclusions on Will Gun Control Help?</u></h3>
+        <p>The case study on Australia shows that the introduction of the National Firearms Agreement saw 68% less homicides and 62% less suicides by firearms over the course of 20 years.</p>
+        <p>If America saw the same success rates, then in the year 2036 there would be 24,000 fewer deaths by firearm (~37,000 now).</p> 
+        <p>That is 66 fewer people per day! (~101 now).</p>
+      </div>
+      <div className="arrow bounce">
+        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef14)}/>
       </div>
 
       <div className='height-90 middle-text side-margins' ref={textRef14}>
-        <h3><u>So What, Why is this important to me?</u></h3>
-        <p>Thousands of lives could be easily saved if America would just follow in the footsteps of countries that have realised they have a problem and acted upon it.</p>
+        <h3><u>So How Bad Is America's Gun Problem??</u></h3>
+        <p>Perhaps America's most severe problem with guns is its unwillingness to change.</p>
+        <p>Tens of thousands of lives could be easily saved if America would just follow in the footsteps of countries that have realised they have a problem and acted upon it.</p>
+        <p>Not doing anything to save 1 life is a problem, but not trying to save potentially tens of thousands of lives speaks greater volumes.</p>
       </div>
-      <div className="arrow bounce">
-        <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(textRef15)}/>
-      </div>
+      <h1 style={{"margin": "0px", "paddingBottom": "80px", "fontSize": "50px"}}>Fin</h1>
     </div>
   );
 }

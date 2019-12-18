@@ -63,6 +63,13 @@ html {
   margin-top: -175px;
 }
 
+.apexcharts-tooltip {
+  color: black;
+}
+.apexcharts-tooltip-text-label {
+  display: none;
+}
+
 /* ----------------------- World Map ---------------------- */
 .rsm-svg {
   max-height: 90vh;

@@ -9,19 +9,12 @@ export const options6 = {
     colors: ['#fff']
   },
   xaxis: {
-    categories: ["Australia (1996)", "Australia (2016)", "USA (2016)", "USA (2036)"]
+    categories: ["Australia (1996)", "Australia (2016)", "USA (2016)", "USA (2036 Prediction)"]
   },
   yaxis: {
     title: {
-      text: undefined
+      text: "Rate of Gun Deaths / 100,000 persons"
     },
-  },
-  tooltip: {
-    y: {
-      formatter: function (val) {
-        return val + "K"
-      }
-    }
   },
   fill: {
     opacity: 1
