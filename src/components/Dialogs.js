@@ -25,7 +25,7 @@ export default ({openDialogs, id, close, content}) => {
     >
       <DialogTitle>Chart Information</DialogTitle>
       <DialogContent>
-          {content}
+        {content}
       </DialogContent>
       <DialogActions>
         <Button onClick={closeDialog} color="primary" className='dialog-text'>
