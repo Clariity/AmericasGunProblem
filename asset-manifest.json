@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/AmericasGunProblem/static/css/main.543df91a.chunk.css",
-    "main.js": "/AmericasGunProblem/static/js/main.6aa60d8c.chunk.js",
-    "main.js.map": "/AmericasGunProblem/static/js/main.6aa60d8c.chunk.js.map",
-    "runtime-main.js": "/AmericasGunProblem/static/js/runtime-main.cd3dbdd7.js",
-    "runtime-main.js.map": "/AmericasGunProblem/static/js/runtime-main.cd3dbdd7.js.map",
-    "static/css/2.dfad446f.chunk.css": "/AmericasGunProblem/static/css/2.dfad446f.chunk.css",
-    "static/js/2.ed78b0d4.chunk.js": "/AmericasGunProblem/static/js/2.ed78b0d4.chunk.js",
-    "static/js/2.ed78b0d4.chunk.js.map": "/AmericasGunProblem/static/js/2.ed78b0d4.chunk.js.map",
-    "index.html": "/AmericasGunProblem/index.html",
-    "precache-manifest.24d1248bb4e5e8a36860eb65a2912bd6.js": "/AmericasGunProblem/precache-manifest.24d1248bb4e5e8a36860eb65a2912bd6.js",
-    "service-worker.js": "/AmericasGunProblem/service-worker.js",
-    "static/css/2.dfad446f.chunk.css.map": "/AmericasGunProblem/static/css/2.dfad446f.chunk.css.map",
-    "static/css/main.543df91a.chunk.css.map": "/AmericasGunProblem/static/css/main.543df91a.chunk.css.map",
-    "static/js/2.ed78b0d4.chunk.js.LICENSE": "/AmericasGunProblem/static/js/2.ed78b0d4.chunk.js.LICENSE"
+    "main.css": "./static/css/main.c4433d3c.chunk.css",
+    "main.js": "./static/js/main.25c30b39.chunk.js",
+    "main.js.map": "./static/js/main.25c30b39.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.f7750b11.js",
+    "runtime-main.js.map": "./static/js/runtime-main.f7750b11.js.map",
+    "static/css/2.dfad446f.chunk.css": "./static/css/2.dfad446f.chunk.css",
+    "static/js/2.08bdf30f.chunk.js": "./static/js/2.08bdf30f.chunk.js",
+    "static/js/2.08bdf30f.chunk.js.map": "./static/js/2.08bdf30f.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.867327fb47added2355555bd5b5f0227.js": "./precache-manifest.867327fb47added2355555bd5b5f0227.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.dfad446f.chunk.css.map": "./static/css/2.dfad446f.chunk.css.map",
+    "static/css/main.c4433d3c.chunk.css.map": "./static/css/main.c4433d3c.chunk.css.map",
+    "static/js/2.08bdf30f.chunk.js.LICENSE": "./static/js/2.08bdf30f.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.cd3dbdd7.js",
+    "static/js/runtime-main.f7750b11.js",
     "static/css/2.dfad446f.chunk.css",
-    "static/js/2.ed78b0d4.chunk.js",
-    "static/css/main.543df91a.chunk.css",
-    "static/js/main.6aa60d8c.chunk.js"
+    "static/js/2.08bdf30f.chunk.js",
+    "static/css/main.c4433d3c.chunk.css",
+    "static/js/main.25c30b39.chunk.js"
   ]
 }
