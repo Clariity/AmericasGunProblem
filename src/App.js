@@ -104,7 +104,7 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text side-margins' ref={introRef}>
-        <h3><u>How to use the site</u></h3>
+        <h3><u>How To Use The Site</u></h3>
         <p>Scroll down to progress through the story or click on the arrows to scroll everything into view for you.</p>
         <h4><u>Quick Navigation</u></h4>
         <p>Want to see a chart again? Scroll directly to them with the navigation bar on the left.</p>
@@ -139,7 +139,7 @@ export default () => {
       <div className='height-90 middle-text side-margins' ref={textRef}>
         <h3><u>Where Are The World's Guns?</u></h3>
         <p>To start to answer the question on how bad Americas gun problem is, let us first look at some factors that will help us to answer questions along the way.</p>
-        <p>America is notorious for the sheer volume of firearms it owns. So how do these numbers stack up against the rest of the world? How many of the world's civilian owned gun are in America?</p>
+        <p>America is notorious for the sheer volume of firearms it owns. So how do these numbers stack up against the rest of the world? How many of the world's civilian owned guns are in America?</p>
       </div>
       <div className="arrow bounce">
         <ArrowDownwardIcon className="arrow-icon" onClick={() => scrollTo(treeMapRef)}/>
@@ -174,7 +174,7 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text side-margins' ref={textRef2}>
-        <h3><u>What about the population?</u></h3>
+        <h3><u>What About the Population?</u></h3>
         <p>This may already seem like an extraordinary amount of guns for one country to own and this tree map chart reflects the distribution of guns around the world. However, population is another factor.</p>
         <p>Let us look at the number of civilian owned guns in each country per 100 persons to demonstrate how many guns there are per capita.</p>
       </div>
@@ -612,7 +612,7 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text side-margins' ref={textRef14}>
-        <h3><u>So How Bad Is America's Gun Problem??</u></h3>
+        <h3><u>So How Bad Is America's Gun Problem?</u></h3>
         <p>Perhaps America's most severe problem with guns is its unwillingness to change.</p>
         <p>Tens of thousands of lives could be easily saved if America would just follow in the footsteps of countries that have realised they have a problem and acted upon it.</p>
         <p>Not doing anything to save 1 life is a problem, but not trying to save potentially tens of thousands of lives speaks greater volumes.</p>
