@@ -72,7 +72,7 @@ html {
 .chart-title-reduced {
   margin-top: 0px;
   margin-bottom: 5px;
-  font-size: 27px;
+  font-size: 25px;
 }
 
 .apexcharts-tooltip {
@@ -87,7 +87,7 @@ html {
 }
 
 a {
-  color: rgb(0, 0, 0);
+  color: #fff;
 }
 a:visited {
   color: rgb(0, 0, 0);

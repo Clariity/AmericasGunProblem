@@ -57,7 +57,7 @@ export const options = {
                 '<span> Death Rate: ' + dataLabels[seriesIndex].data[dataPointIndex][2] + '</span>' +
               '</div>'
     }
-  }
+  },
 }
 
 const dataLabels = [{

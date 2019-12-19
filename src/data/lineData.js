@@ -10,7 +10,7 @@ export const options5 = {
           color: '#fff',
           background: '#000',
         },
-        text: 'National Firearms Agreement Passed',
+        text: 'Firearms Agreement Passed',
       }
     }]
   },

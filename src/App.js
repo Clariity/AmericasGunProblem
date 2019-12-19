@@ -231,14 +231,12 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text' ref={scatterRef}>
-        <ScrollAnimation animateIn='fadeInRight' >
+        <ScrollAnimation animateIn='fadeInRight' style={{"width": "65vw"}}>
           <h3 className='chart-title'>The Effect of Gun Prevalence on Firearm Death Rates</h3>
           <ApexChart 
             options={options} 
             series={series} 
             type="line" 
-            width="900"
-            height="550" 
             className="scatter-background"
           />
         </ScrollAnimation>
@@ -309,14 +307,12 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text' ref={scatterRef2}>
-        <ScrollAnimation animateIn='fadeInLeft'>
+        <ScrollAnimation animateIn='fadeInLeft' style={{"width": "65vw"}}>
           <h3 className='chart-title'>The Effect of Gun Prevalence on Firearm Death Rates (Adjusted)</h3>
           <ApexChart 
             options={options2} 
             series={series2} 
-            type="line" 
-            width="900"
-            height="550" 
+            type="line"
             className="scatter-background"
           />
         </ScrollAnimation>
@@ -391,14 +387,12 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text' ref={scatterRef3}>
-        <ScrollAnimation animateIn='zoomIn'>
-          <h3 className='chart-title-reduced'>The Effect of Human Development on Firearm Death Rates For Top 20% of Countries</h3>
+        <ScrollAnimation animateIn='zoomIn' style={{"width": "65vw"}}>
+          <h3 className='chart-title'>The Effect of Human Development on Firearm Death Rates For Top 20% of Countries</h3>
           <ApexChart 
             options={options3} 
             series={series3} 
             type="scatter" 
-            width="900"
-            height="550"
             className="scatter-background" 
           />
         </ScrollAnimation>
@@ -450,14 +444,12 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text' ref={barRef}>
-        <ScrollAnimation animateIn='zoomIn'>
+        <ScrollAnimation animateIn='zoomIn' style={{"width": "65vw"}}>
           <h3 className='chart-title'>Firearm Death Rates For Top 20% of Countries</h3>
           <ApexChart 
             options={options4} 
             series={series4} 
-            type="bar" 
-            width="900"
-            height="550" 
+            type="bar"
             className="scatter-background"
           />
         </ScrollAnimation>
@@ -510,14 +502,12 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text' ref={lineRef}>
-        <ScrollAnimation animateIn='slideInLeft'>
+        <ScrollAnimation animateIn='slideInLeft' style={{"width": "65vw"}}>
           <h3 className='chart-title'>Australia Firearm Death Rates 1979 - 2016</h3>
           <ApexChart 
             options={options5} 
             series={series5} 
-            type="line" 
-            width="900"
-            height="550" 
+            type="line"
             className="scatter-background"
           />
         </ScrollAnimation>
@@ -554,14 +544,12 @@ export default () => {
       </div>
 
       <div className='height-90 middle-text' ref={barRef2}>
-        <ScrollAnimation animateIn='slideInRight'>
+        <ScrollAnimation animateIn='slideInRight' style={{"width": "65vw"}}>
           <h3 className='chart-title'>Predicted American Firearm Death Rates</h3>
           <ApexChart 
             options={options6} 
             series={series6} 
-            type="bar" 
-            width="900"
-            height="550" 
+            type="bar"
             className="scatter-background"
           />
         </ScrollAnimation>

@@ -6,8 +6,11 @@ export const treeMapTheme = {
   }
 };
 
+const w = window.innerWidth;
+const h = window.innerHeight;
+
 export const treeMapOptions = {
-  chart: { width: 900, height: 550 },
+  chart: { width: 0.7 * w, height: 0.7 * h },
   series: { showLabel: true, zoomable: true, useLeafLabel: false },
   tooltip: { suffix: "guns", offsetY: -40},
   chartExportMenu: { visible: false }
