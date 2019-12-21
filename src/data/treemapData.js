@@ -1,3 +1,5 @@
+import "./treeMap.css"
+
 export const treeMapTheme = {
   series: {
     colors: [ "#83b14e", "#458a3f", "#295ba0", "#2a4175", "#289399", "#289399", "#617178", "#8a9a9a", "#516f7d", "#dddddd" ],
@@ -12,9 +14,24 @@ const h = window.innerHeight;
 export const treeMapOptions = {
   chart: { width: 0.7 * w, height: 0.7 * h },
   series: { showLabel: true, zoomable: true, useLeafLabel: false },
-  tooltip: { suffix: "guns", offsetY: -40},
+  tooltip: { 
+    suffix: "guns", 
+    offsetY: -40,
+    template: function(category, item, categoryTimestamp) {
+      var body = '<div class="tui-chart-tooltip-body">' + 
+                    '<span class="tui-chart-legend-rect treemap" style="' + item.cssText + '"></span>' +
+                    '<span>' + item.legend + '</span><span class="tui-chart-tooltip-value">' + addCommas(item.value) + '&nbsp;guns</span>' +
+                  '</div>' +
+                '</div>'
+      return body;
+    }
+  },
   chartExportMenu: { visible: false }
 };
+
+const addCommas = (value) => {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 export const treeMapData = { 
   "series": [
