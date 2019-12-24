@@ -106,6 +106,7 @@ export default () => {
       <div className='height-90 middle-text side-margins' ref={introRef}>
         <h3><u>How to use the Site</u></h3>
         <p className='no-margin-top'>Scroll down to progress through the story or click on the arrows to scroll everything into view.</p>
+        <p className='no-margin-top'>IMPORTANT: For the best experience please use F11 to go into fullscreen mode.</p>
         <h4><u>Quick Navigation</u></h4>
         <p className='no-margin-top'>Want to see a chart again? Scroll directly to it with the navigation bar on the left.</p>
         <h4><u>Source Information</u></h4>
