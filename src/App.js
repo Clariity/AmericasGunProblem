@@ -148,7 +148,7 @@ export default () => {
 
       <div className='height-90 middle-text' ref={treeMapRef}>
         <ScrollAnimation animateIn='bounceIn'>
-          <h3 className='chart-title'>Global Distribution of Civilian Held Firearms</h3>
+          <h3 className='chart-title'>Global Distribution of Civilian Held Firearms (Total: 857,000,000)</h3>
           <div id="chart-area" className="scatter-background"/>
         </ScrollAnimation>
         <div className='interactivity'>
