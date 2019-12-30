@@ -161,13 +161,13 @@ a:visited {
   /* background-color: rgb(97, 187, 218); */
   color: white;
   padding: 5px;
-  width: 50px;
-  height: 720px;
+  width: 40px;
+  height: 680px;
   z-index: 100;
   position: fixed;
   top: 50%;
   left: 30px;
-  margin-top: -366px;
+  margin-top: -333px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -176,8 +176,8 @@ a:visited {
 }
 
 .floating-nav-button {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: solid white 2px;
   display: flex;
@@ -193,8 +193,8 @@ a:visited {
 }
 
 .floating-nav-button-a {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
