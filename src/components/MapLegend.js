@@ -5,7 +5,7 @@ export default () => {
     <div className='worldmap-legend'>
       <div className='worldmap-legend-number'>0</div>
       <div className='worldmap-legend-gradient'>
-        <svg width="1000px" height="20px">
+        <svg width="800px" height="20px">
           <defs>
             <linearGradient id="Gradient-1" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="#ffedea" />

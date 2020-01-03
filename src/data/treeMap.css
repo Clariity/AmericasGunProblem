@@ -1,0 +1,23 @@
+.tui-chart-tooltip-body {
+  background-color: #5f5f5f;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 11px 15px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.tui-chart-legend-rect {
+  width: 10px;
+  margin-right: 8px;
+  vertical-align: text-top;
+}
+
+.tui-chart-tooltip-body span {
+  display: inline-block;
+  height: 10px;
+}
+
+.tui-chart-tooltip-body .tui-chart-tooltip-value {
+  padding-left: 44px;
+  text-align: right;
+}
