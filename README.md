@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## America's Gun Problem
+This is a Data Visualisation Story created for the University of Southampton COMP6234 coursework.
 
-## Available Scripts
+This React app is hosted using github pages. Click the [github.io](https://clariity.github.io/AmericasGunProblem/) link to view it.
 
-In the project directory, you can run:
+### Sources
 
-### `npm start`
+All data sources can be found on the hosted site with links offered with every visualisation.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Please Note
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This does not contain good practise React code. I didn't even try to make it good code. There were no marks for code quality so it is literally slapped linearly in the App.js file.
 
-### `npm test`
+I am also aware that this is a controversial topic. I was tasked with finding one or several datasets and with that data, creating a story with appropriate visualisations. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This was the story I chose to go with as it aligned well with the data and provides a strong impact. 
 
-### `npm run build`
+I respect America's constitution and their right to bear arms according to their 2nd ammendment.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Compatibility
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Note: This is NOT compatible on mobile and I have intention of putting myself through the pain of making it so**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Minimum recommended resolution is 720p
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Compatible browsers: Chrome, Opera, Firefox, Edge (Just about)
+Not compatible with Internet Explorer
