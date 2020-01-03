@@ -15,13 +15,14 @@ I am also aware that this is a controversial topic. I was tasked with finding on
 
 This was the story I chose to go with as it aligned well with the data and provides a strong impact. 
 
-I respect America's constitution and their right to bear arms according to their 2nd ammendment.
+I respect the United States Constitution and their right to keep and bear arms according to their Second Ammendment.
 
 ### Compatibility
 
-**Note: This is NOT compatible on mobile and I have intention of putting myself through the pain of making it so**
+**Note: This is NOT compatible on mobile and I have no intention of putting myself through the pain of making it so**
 
 Minimum recommended resolution is 720p
 
 Compatible browsers: Chrome, Opera, Firefox, Edge (Just about)
+
 Not compatible with Internet Explorer
